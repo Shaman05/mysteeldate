@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div id="overflowClosed">
+	<div id="scrollerDiv"></div>
+</div>
+<div id="bg">
+	<div id="grid"></div>
+</div>
+<div id="canvasPIXI"></div>
+<div id="mainQuoteAll">
+	<div id="mainQuoteHidden">
+		<div id="mainQuote"><br>Aby być sobą, trzeba być kimś</div>
+	</div>
+	<div id="secondQuote">STANISŁAW JERZY LEC</div>
+	<div id="lineQuote1" class="lineQuote"></div>
+	<div id="lineQuote2" class="lineQuote"></div>
+	<div id="lineQuote3" class="lineQuote"></div>
+
+</div>
+<div id="content" style="display:none">
+	<script>var selectedTemplate = "homePageTMP";</script>
+</div>
+<div id="infoDescription">
+	<div id="infoDsc">
+		<div id="infoFull">
+			<div class="closeBtn">
+				<div class="closeBtnIns"></div>
+			</div>
+			<div id="headerInfo"></div>
+			<div id="scrollProd">
+				<div id="scrollCont">
+					<div id="infoIntro"></div>
+					<div id="mainDescInfo"></div>
+					<br class="clear"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="bgHider"></div>
+<div id="arrowDown">
+	<div id="arrowD"></div>
+</div>
+<div id="menuMobile">
+	<ul id="menuHolderM">
+
+		<li class="dotbreaker"></li>
+
+		<li id="item1M" class="menuItemMobile">
+
+			<a id="instytutItemM" class="menuItemM" href="">
+
+				<div class="menuOutM" id="instytutItemOutM">INSTYTUT</div>
+
+				<div class="mOverM"></div>
+
+			</a>
+
+		</li>
+
+		<li class="dotbreaker" id="sub1">
+			<div class="subHidden">
+				<a id="instytutItem1M" class="menuItemSubM" href="http://personalbrandinstitute.com/instytut/dlakogopowstal">
+					<div class="menuOverM">DLA KOGO POWSTAŁ</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="instytutItem2M" class="menuItemSubM" href="http://personalbrandinstitute.com/instytut/osiagniecia">
+					<div class="menuOverM">OSIĄGNIĘCIA</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="instytutItem3M" class="menuItemSubM" href="http://personalbrandinstitute.com/instytut/kapital">
+					<div class="menuOverM">KAPITAŁ REPUTACJI</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="instytutItem4M" class="menuItemSubM" href="http://personalbrandinstitute.com/instytut/brylantmarki">
+					<div class="menuOverM">BRYLANT MARKI&copy;</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="instytutItem5M" class="menuItemSubM" href="http://personalbrandinstitute.com/instytut/klienci">
+					<div class="menuOverM">KLIENCI</div>
+					<div class="mOverM"></div>
+				</a>
+			</div>
+		</li>
+
+		<li id="item2M" class="menuItemMobile">
+
+			<a id="ofertaItemM" class="menuItemM" href="http://personalbrandinstitute.com/dla-ciebie">
+
+				<div class="menuOutM" id="ofertaItemOutM">DLA CIEBIE</div>
+
+				<div class="mOverM"></div>
+
+			</a>
+
+		</li>
+
+		<li class="dotbreaker" id="sub2"></li>
+
+		<li id="item3M" class="menuItemMobile">
+
+			<a id="ofertaItem2M" class="menuItemM" href="http://personalbrandinstitute.com/dla-firmy">
+
+				<div class="menuOutM" id="ofertaItemOut2M">DLA FIRM</div>
+
+				<div class="mOverM"></div>
+
+			</a>
+
+		</li>
+
+		<li class="dotbreaker" id="sub3"></li>
+
+		<li id="item4M" class="menuItemMobile">
+
+			<a id="inicjatywyItemM" class="menuItemM" href="">
+
+				<div class="menuOutM" id="inicjatywyItemOutM">INICJATYWY</div>
+
+				<div class="mOverM"></div>
+
+			</a>
+
+		</li>
+
+		<li class="dotbreaker" id="sub4">
+			<div class="subHidden">
+				<a id="inicjatywyItem2M" class="menuItemSubM" href="http://personalbrandinstitute.com/inicjatywy/ceobrandclub">
+					<div class="menuOverM">CEO BRAND CLUB&copy;</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="inicjatywyItem4M" class="menuItemSubM"
+				   href="http://personalbrandinstitute.com/inicjatywy/personalbrandambassadors">
+					<div class="menuOverM">PERSONAL BRAND AMBASSADORS&copy;</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="inicjatywyItem1M" class="menuItemSubM" href="http://personalbrandinstitute.com/inicjatywy/brandlikeyou">
+					<div class="menuOverM">BRAND LIKE YOU&copy;</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="inicjatywyItem3M" class="menuItemSubM"
+				   href="http://personalbrandinstitute.com/inicjatywy/markanaobcasach">
+					<div class="menuOverM">MARKA NA OBCASACH&copy;</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="inicjatywyItem5M" class="menuItemSubM"
+				   href="http://personalbrandinstitute.com/inicjatywy/personalbrandnetworkpl">
+					<div class="menuOverM">PERSONAL BRAND NETWORK PL&copy;</div>
+					<div class="mOverM"></div>
+				</a>
+			</div>
+		</li>
+
+		<li id="item5M" class="menuItemMobile">
+
+			<a id="wydarzeniaItemM" class="menuItemM" href="http://personalbrandinstitute.com/wydarzenia">
+
+				<div class="menuOutM" id="wydarzeniaItemOutM">WYDARZENIA</div>
+
+				<div class="mOverM"></div>
+
+			</a>
+
+		</li>
+
+		<li class="dotbreaker" id="sub5"></li>
+
+		<li id="item6M" class="menuItemMobile">
+
+			<a id="zalozycielkaItemM" class="menuItemM" href="">
+
+				<div class="menuOutM" id="zalozycielkaItemOutM">ZAŁOŻYCIELKA</div>
+
+				<div class="mOverM"></div>
+
+			</a>
+
+		</li>
+
+		<li class="dotbreaker" id="sub6">
+			<div class="subHidden">
+				<a id="zalozycielkaItem1M" class="menuItemSubM" href="http://personalbrandinstitute.com/zalozycielka/jmp">
+					<div class="menuOverM">JOANNA MALINOWSKA-PARZYDŁO</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="zalozycielkaItem2M" class="menuItemSubM"
+				   href="http://personalbrandinstitute.com/zalozycielka/publikacje">
+					<div class="menuOverM">PUBLIKACJE</div>
+					<div class="mOverM"></div>
+				</a>
+
+				<div class="dotbreaker2"></div>
+				<a id="zalozycielkaItem3M" class="menuItemSubM"
+				   href="http://personalbrandinstitute.com/zalozycielka/jestesmarka">
+					<div class="menuOverM">BLOG JESTEŚ MARKĄ</div>
+					<div class="mOverM"></div>
+				</a>
+			</div>
+		</li>
+
+		<li id="item7M" class="menuItemMobile">
+
+			<a id="kontaktItemM" class="menuItemM" href="http://personalbrandinstitute.com/kontakt">
+
+				<div class="menuOutM" id="kontaktItemOutM">KONTAKT</div>
+
+				<div class="mOverM"></div>
+
+			</a>
+
+		</li>
+
+		<li class="dotbreaker"></li>
+
+	</ul>
+</div>
+
+<img id="logoTypo" src="http://personalbrandinstitute.com/img/typoPBI.svg" alt="Personal Brand Institute"/>
+
+
+<nav id="menuRight">
+
+	<div id="menuTop">
+		<div id="dots"></div>
+	</div>
+
+	<div id="tickOver"></div>
+
+	<ul id="menuHolder">
+
+		<li id="item1">
+
+			<a id="instytutItem" class="menuItem" href="http://personalbrandinstitute.com/instytut/dlakogopowstal">
+
+				<div class="menuOver" id="instytutItemOver">INSTYTUT</div>
+
+				<div class="menuOut" id="instytutItemOut">INSTYTUT</div>
+
+				<div class="mOver" id="itemOver1"></div>
+
+			</a>
+
+		</li>
+
+		<li id="item2">
+
+			<a id="ofertaItem" class="menuItem" href="http://personalbrandinstitute.com/dla-ciebie">
+
+				<div class="menuOver" id="ofertaItemOver">DLA CIEBIE</div>
+
+				<div class="menuOut" id="ofertaItemOut">DLA CIEBIE</div>
+
+				<div class="mOver" id="itemOver2"></div>
+
+			</a>
+
+		</li>
+
+		<li id="item3">
+
+			<a id="ofertaItem2" class="menuItem" href="http://personalbrandinstitute.com/dla-firmy">
+
+				<div class="menuOver" id="ofertaItemOver2">DLA FIRM</div>
+
+				<div class="menuOut" id="ofertaItemOut2">DLA FIRM</div>
+
+				<div class="mOver" id="itemOver3"></div>
+
+			</a>
+
+		</li>
+
+		<li id="item4">
+
+			<a id="inicjatywyItem" class="menuItem" href="http://personalbrandinstitute.com/inicjatywy/ceobrandclub">
+
+				<div class="menuOver" id="inicjatywyItemOver">INICJATYWY</div>
+
+				<div class="menuOut" id="inicjatywyItemOut">INICJATYWY</div>
+
+				<div class="mOver" id="itemOver4"></div>
+
+			</a>
+
+		</li>
+
+		<li id="item5">
+
+			<a id="wydarzeniaItem" class="menuItem" href="http://personalbrandinstitute.com/wydarzenia">
+
+				<div class="menuOver" id="wydarzeniaItemOver">WYDARZENIA</div>
+
+				<div class="menuOut" id="wydarzeniaItemOut">WYDARZENIA</div>
+
+				<div class="mOver" id="itemOver6"></div>
+
+			</a>
+
+		</li>
+
+		<li id="item6">
+
+			<a id="zalozycielkaItem" class="menuItem" href="http://personalbrandinstitute.com/zalozycielka/jmp">
+
+				<div class="menuOver" id="zalozycielkaItemOver">ZAŁOŻYCIELKA</div>
+
+				<div class="menuOut" id="zalozycielkaItemOut">ZAŁOŻYCIELKA</div>
+
+				<div class="mOver" id="itemOver7"></div>
+
+			</a>
+
+		</li>
+
+		<li id="item7">
+
+			<a id="kontaktItem" class="menuItem" href="http://personalbrandinstitute.com/kontakt">
+
+				<div class="menuOver" id="kontaktItemOver">KONTAKT</div>
+
+				<div class="menuOut" id="kontaktItemOut">KONTAKT</div>
+
+				<div class="mOver" id="itemOver8"></div>
+
+			</a>
+
+		</li>
+
+	</ul>
+	<div id="menuMobileShow">
+		<div id="menuMobileShowIcon1"></div>
+		<div id="menuMobileShowIcon2"></div>
+	</div>
+
+	<div id="menuBottom">
+		<div id="dots2"></div>
+	</div>
+
+	<div id="tickOut"></div>
+
+</nav>
+
+<img id="logoPBI" src="http://personalbrandinstitute.com/img/logoPBI.svg" alt="logo_personal_brand"/>
+<img id="logoTypo2" src="http://personalbrandinstitute.com/img/typoPBI2.svg" alt="Personal Brand Institute"/>
+<footer id="footerPBI">
+	<div id="cookiesInfo">TA STRONA UŻYWA COOKIES (TZW.CIASTECZKA). KORZYSTAJĄC Z NIEJ WYRAŻASZ ZGODĘ<br>NA ICH UŻYWANIE,
+		ZGODNIE Z AKTUALNYMI USTAWIENIAMI PRZEGLĄDARKI. <a id="rozumiem" href="">ROZUMIEM</a></div>
+
+	<a id="partnerzy" href="http://personalbrandinstitute.com/partnerzy">PARTNERZY</a>
+	<span class="spaceFooter">/</span>
+	<a id="dlamediow" href="http://personalbrandinstitute.com/dla-mediow">DLA MEDIÓW</a>
+	<span class="spaceFooter">/</span>
+	<a id="jestesmarka" href="http://jestesmarka.pl/">BLOG JESTEŚ MARKĄ</a>
+	<span class="spaceFooter">/</span>
+	<a id="kontakt" href="http://personalbrandinstitute.com/kontakt">KONTAKT</a>
+	<a id="linked"
+	   href="https://www.linkedin.com/company/5231978?trk=tyah&amp;trkInfo=tarId%3A1402386398952%2Ctas%3APersonal%20Brand%20Institu%2Cidx%3A1-1-1"
+	   target="_blank">
+		<div id="linkedIcoB">
+			<div id="linkedIco"></div>
+		</div>
+	</a>
+	<a id="fb" href="https://www.facebook.com/malinowskaparzydlo" target="_blank">
+		<div id="fbIcoB">
+			<div id="fbIco"></div>
+		</div>
+	</a>
+
+	<div id="sndBtn">
+		<div id="soundIconOn"></div>
+		<div id="soundIconOff"></div>
+	</div>
+</footer>
+<div id="copy">&copy;2013-2014 JOANNA MALINOWSKA-PARZYDŁO</div>
+<div id="fwa" class="right top">
+	<a href="http://www.thefwa.com/site/personal-brand-institute" target="_blank">Personal Brand Institute - FWA Site of
+		the Day</a>
+</div>
+<div id="awwwards" class="right white">
+	<a href="http://www.awwwards.com/web-design-awards/personal-brand-institute" target="_blank">Personal Brand Institute
+		- Awwwards Site of the Day</a>
+</div>
+<script>
+	var createjs = window;
+	var base_url = './';
+</script>
+
+<script>
+	//		if (!Modernizr.canvas) {
+	//			window.location.href = "index_old.html";
+	//		}
+</script>
+
+<script type="text/javascript" src="cdn/cloudflare/TweenLite.min.js"></script>
+<script type="text/javascript" src="cdn/cloudflare/TimelineLite.min.js"></script>
+<script type="text/javascript" src="cdn/cloudflare/EasePack.min.js"></script>
+<script type="text/javascript" src="cdn/cloudflare/CSSPlugin.min.js"></script>
+<script type="text/javascript" src="cdn/cloudflare/RoundPropsPlugin.min.js"></script>
+<script type="text/javascript" src="cdn/cloudflare/ScrollToPlugin.min.js"></script>
+<script type="text/javascript" src="cdn/createjs/easeljs-0.7.1.min.js"></script>
+<script type="text/javascript" src="cdn/createjs/preloadjs-0.4.1.min.js"></script>
+<script type="text/javascript" src="cdn/createjs/soundjs-0.5.2.min.js"></script>
+<script type="text/javascript" src="lib/modernizr.custom.85976.min.js"></script>
+<script type="text/javascript" src="lib/device.min.js"></script>
+<script type="text/javascript" src="lib/pixi.js"></script>
+<script type="text/javascript" src="lib/getDevicePixelRatio-min.js"></script>
+<script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="lib/jquery.history.min.js"></script>
+<script type="text/javascript" src="lib/jquery.selectric.js"></script>
+<script type="text/javascript" src="lib/iscroll.js"></script>
+<script type="text/javascript" src="js/master.min.js"></script>
+<script type="text/javascript" src="js/structure/d.js"></script>
+</body>
+</html>

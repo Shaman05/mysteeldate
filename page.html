@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="dist/libs.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+            sectionsColor: ['#0D2241', '#273A6D', '#093675', '#093675', '#093675', '#093675'],
+            navigation: true,
+            verticalCentered: false, //内容是否垂直居中
+            navigationPosition: 'right',
+            navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
+        });
+    });
+    </script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenLite.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/plugins/CSSPlugin.min.js"></script>
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="tn-header">
+            <div class="tn-logo">
+                <a href="http://www.eastmoney.com/" target="_blank"><span class="logo-img"></span></a>
+            </div>
+            <ul class="tn-person-r">
+                <li><a href="#" target="_blank"><span class="tn-icon tn-icon-data"></span>数据浏览</a></li>
+                <li class="active"><a href="#" target="_blank"><span class="tn-icon tn-icon-analysis"></span>数据分析</a></li>
+                <li><a href="javascript:void(0);" id="edit-password"><span class="tn-icon tn-icon-control"></span>修改密码</a></li>
+                <li><a href="#" target="_blank"><span class="tn-icon tn-icon-cancel"></span>注销</a></li>
+                <li class="last">欢迎您:yangang2</li>
+            </ul>
+        </div>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div id="bg">
+                <div id="grid"></div>
+            </div>
+            <div id="canvasPIXI"></div>
+            <div id="mainQuoteAll">
+                <div id="mainQuoteHidden">
+                    <div id="mainQuote">
+                        <br>Aby być sobą, trzeba być kimś</div>
+                </div>
+                <div id="secondQuote">STANISŁAW JERZY LEC</div>
+                <div id="lineQuote1" class="lineQuote"></div>
+                <div id="lineQuote2" class="lineQuote"></div>
+                <div id="lineQuote3" class="lineQuote"></div>
+            </div>
+            <div id="content" style="display:none">
+                <script>
+                var selectedTemplate = "homePageTMP";
+                </script>
+            </div>
+            <div id="infoDescription">
+                <div id="infoDsc">
+                    <div id="infoFull">
+                        <div class="closeBtn">
+                            <div class="closeBtnIns"></div>
+                        </div>
+                        <div id="headerInfo"></div>
+                        <div id="scrollProd">
+                            <div id="scrollCont">
+                                <div id="infoIntro"></div>
+                                <div id="mainDescInfo"></div>
+                                <br class="clear" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sndBtn">
+                <div id="soundIconOn"></div>
+                <div id="soundIconOff"></div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>第二屏</h3>
+        </div>
+        <div class="section">
+            <h3>第三屏</h3>
+        </div>
+        <div class="section">
+            <h3>第四屏</h3>
+        </div>
+        <div class="section">
+            <h3>第5屏</h3>
+        </div>
+        <div class="section">
+            <h3>第6屏</h3>
+        </div>
+        <div class="section">
+            <h3>第7屏</h3>
+        </div>
+    </div>
+</body>
+<script>
+var createjs = window;
+var base_url = './';
+var _CONF_ = {
+    data_point: 3,
+    rotate_deg: 0.001
+};
+</script>
+<script type="text/javascript" src="dist/cdn.min.js"></script>
+<script type="text/javascript" src="dist/master.min.js"></script>
+
+</html>

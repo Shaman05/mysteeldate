@@ -1,5 +1,176 @@
-$bgColor: black;
-body{
-  background: $bgColor;
-  margin: 0;
+@charset 'UTF-8';
+@import 'base';
+@import 'function';
+@import 'ext/btn';
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.top-nav {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 65px;
+    font-family: 'Microsoft YaHei';
+    // background: #466987;
+    @include bgcolor-alpha($bgcolor: rgba(24, 46, 77, 0.3));
+    .tn-header {
+        width: 1000px;
+        margin: 0 auto;
+        font-family: "Microsoft YaHei", "SimSun";
+        color: #fff;
+        .tn-logo {
+            float: left;
+            height: 65px;
+            overflow: hidden;
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                width: 125px;
+                height: 65px;
+                overflow: hidden;
+                background: url('../img/idx_nav.png') no-repeat;
+                &.logo-img {
+                    background-position: left 5px;
+                }
+            }
+        }
+        .tn-person-r {
+            float: right;
+            padding: 10px 0;
+            li {
+                padding: 5px 12px 5px 14px;
+                //border-right: 1px solid #081930;
+                float: left;
+                @include font-fsc1($f-sty: $fontYaHei, $fs: 14px, $fc: #fff, $f-lh: 35px);
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: yellow;
+                    }
+                }
+                &.last {
+                    border-right: none;
+                }
+                &.active {
+                    background: #16659D;
+                    border-radius: 3px;
+                }
+                .tn-icon {
+                    margin-right: 10px;
+                    display: inline-block;
+                    width: 24px;
+                    height: 20px;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    background: url('../img/idx_nav.png') no-repeat;
+                    &.tn-icon-data {
+                        background-position: -10px -73px;
+                    }
+                    &.tn-icon-analysis {
+                        background-position: -84px -73px;
+                    }
+                    &.tn-icon-control {
+                        background-position: -162px -72px;
+                    }
+                    &.tn-icon-cancel {
+                        background-position: -221px -71px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#canvasPIXI {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
+
+.section {
+    background-size: cover;
+}
+
+#section0 {
+    background-image: url(../img/pbi_bg_final.jpg);
+    background-repeat: no-repeat;
+    #bg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #000;
+        opacity: 0
+    }
+    #mainQuoteAll {
+        position: fixed;
+        width: 360px;
+        height: 120px;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        visibility: hidden
+    }
+    #mainQuoteHidden {
+        position: absolute;
+        width: 360px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        overflow: hidden
+    }
+    #mainQuote {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        letter-spacing: 0;
+        font-family: "Playfair Display";
+        color: #fff;
+        font-size: 27px;
+        line-height: 30px;
+        font-style: italic;
+        text-align: center
+    }
+    .lineQuote {
+        width: 75px;
+        position: absolute;
+        background-color: #a69382;
+        height: 1px;
+        opacity: 1
+    }
+    #lineQuote1 {
+        left: 0;
+        bottom: 8px
+    }
+    #lineQuote2 {
+        right: 0;
+        bottom: 8px
+    }
+    #lineQuote3 {
+        left: 80px;
+        bottom: 8px;
+        width: 200px;
+        opacity: 0
+    }
+    #secondQuote {
+        position: absolute;
+        font-family: pt_sans;
+        color: #a69382;
+        font-size: 11px;
+        line-height: normal;
+        font-style: normal;
+        letter-spacing: 2.5px;
+        text-align: center;
+        width: 100%;
+        bottom: 0
+    }
 }

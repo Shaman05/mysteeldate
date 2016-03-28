@@ -119,7 +119,7 @@ function Diamond(e, t) {
   this.clickTags = [];
   var n;
   var r = Math.PI * .2;
-  var i = Math.PI * 2 / data_count;
+  var i = Math.PI * 2 / _CONF_.data_point;
   var s;
   var o;
   var u;
@@ -127,7 +127,7 @@ function Diamond(e, t) {
   var f;
   var l;
   if (!PBISite.deactivePoints) {
-    for (o = 0; o < data_count; o++) {
+    for (o = 0; o < _CONF_.data_point; o++) {
       n = new ClickTag;
       u = 480 * .65;
       s = Math.random() * .1 * i;
@@ -146,32 +146,33 @@ function Diamond(e, t) {
       n.view.view2 = n.view2;
       n.view.textIt = n.textIt;
       n.view.mouseover = function (e) {
-        showQuote(this.textIt);
-        TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
-        TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
+        console.log(e);
+        //showQuote(this.textIt);
+        //TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
+        //TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
       };
       n.view.mouseout = function (e) {
-        TweenLite.delayedCall(2, showQuote);
-        TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
-        TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
+        //TweenLite.delayedCall(2, showQuote);
+        //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
+        //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
       };
       n.view.click = function (e) {
-        animationBenefit(this.id)
+        //animationBenefit(this.id)
       };
       n.view.touchend = function (e) {
-        TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
-        TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
+        //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
+        //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
       };
       n.view.touchendoutside = function (e) {
-        TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
-        TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
+        //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
+        //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
       };
       n.view.touchstart = function (e) {
-        TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
-        TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
+        //TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
+        //TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
       };
       n.view.tap = function (e) {
-        animationBenefit(this.id)
+        //animationBenefit(this.id)
       };
       PBISite.dotsContainer.addChild(n.view2);
       PBISite.dotsContainer.addChild(n.view);
@@ -804,7 +805,7 @@ Diamond.prototype.animateDiamond = function () {
   if (PBISite.bgFlov) {
     PBISite.dotsLayerBG.updateView_asBgDots()
   }
-  PBISite.diamondContainer.rotation += .001
+  PBISite.diamondContainer.rotation += _CONF_.rotate_deg;
 };
 DotsLayer.prototype.init_bgDots = function (e) {
   this.clean();

@@ -1,8 +1,14 @@
 {
-  "name": "mysteeldate",
+  "name": "mysteeldata",
   "version": "1.0.0",
-  "description": "",
+  "description": "my steel data web site",
+  "repository": "https://github.com/Shaman05/mysteeldate.git",
   "main": "index.html",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.3"
+  }
 }

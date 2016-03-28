@@ -119,7 +119,7 @@ function Diamond(e, t) {
   this.clickTags = [];
   var n;
   var r = Math.PI * .2;
-  var i = Math.PI * 2 / 7;
+  var i = Math.PI * 2 / data_count;
   var s;
   var o;
   var u;
@@ -127,7 +127,7 @@ function Diamond(e, t) {
   var f;
   var l;
   if (!PBISite.deactivePoints) {
-    for (o = 0; o < 7; o++) {
+    for (o = 0; o < data_count; o++) {
       n = new ClickTag;
       u = 480 * .65;
       s = Math.random() * .1 * i;

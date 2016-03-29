@@ -146,20 +146,21 @@ function Diamond(e, t) {
       n.view.view2 = n.view2;
       n.view.textIt = n.textIt;
       n.view.mouseover = function (e) {
-        console.log(e);
         //showQuote(this.textIt);
-        //TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
-        //TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
+        TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
+        TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
       };
       n.view.mouseout = function (e) {
         //TweenLite.delayedCall(2, showQuote);
-        //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
-        //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
+        TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
+        TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
       };
       n.view.click = function (e) {
+        window.onPointClick && window.onPointClick(e, this, n);
         //animationBenefit(this.id)
       };
       n.view.touchend = function (e) {
+        window.onPointClick && window.onPointClick(e, this);
         //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
         //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
       };

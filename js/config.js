@@ -19,4 +19,39 @@
     rotate_deg: 0.001
   };
 
+  this.pointText = [
+    {
+      title: '热门数据',
+      desc: '热门数据热门数据热门数据热门数据'
+    },
+    {
+      title: '最新数据',
+      desc: '最新数据最新数据最新数据'
+    },
+    {
+      title: '最新数据预测',
+      desc: '最新数据预测最新数据预测'
+    }
+  ];
+  this.quotesArr = [
+    [
+      "<br>测试标题111",
+      "JAMES MASON",
+      6,
+      27
+    ],
+    [
+      "<br>测试标题22222",
+      "JAMES MASON",
+      6,
+      27
+    ],
+    [
+      "<br>测试标题333",
+      "JAMES MASON",
+      6,
+      27
+    ]
+  ];
+
 }.call(window));

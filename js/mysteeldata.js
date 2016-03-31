@@ -19,13 +19,21 @@
       navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
     });
 
+    var $rotateContain = $('#contain');
+    $rotateContain.find('.item').on('mouseover', function(){
+      var index = $(this).index();
+      var deg = index === 1 ? -60 : index === 2 ? 60 : 0;
+      $rotateContain[0].style.transform = 'rotateY(' + deg + 'deg)';
+    });
   });
 
-  this.onPointClick = function(e, object, n){
-    console.log(e);
-    console.log('----');
-    console.log(object);
-    console.log(n);
+  var $mainQuote = $('#mainQuote');
+  this.onPointClick = function(e, object, n, index){
+    //todo
+    alert(index);
+  };
+  this.onPointOver = function(e, object, n, index){
+    $mainQuote.html(pointText[index]['title'] + '<br>' + pointText[index]['desc']);
   };
 
 }.call(window));

@@ -133,7 +133,8 @@ function Diamond(e, t) {
       s = Math.random() * .1 * i;
       a = Math.cos(Math.PI + i * (o + 1) + s + i / 1.5) * u;
       f = Math.sin(Math.PI + i * (o + 1) + s + i / 1.5) * u;
-      n.addView(this.textureButton, this.textureButton2, PBISite.benefitsArr[o][2]);
+      //n.addView(this.textureButton, this.textureButton2, PBISite.benefitsArr[o][2]);
+      n.addView(this.textureButton, this.textureButton2, pointText[o]['title']);
       n.setPosition(parseInt(a) - 25, parseInt(f) - 25);
       n.x = parseInt(a);
       n.y = parseInt(f);
@@ -145,36 +146,40 @@ function Diamond(e, t) {
       n.view.id = o;
       n.view.view2 = n.view2;
       n.view.textIt = n.textIt;
-      n.view.mouseover = function (e) {
-        //showQuote(this.textIt);
-        TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
-        TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
-      };
-      n.view.mouseout = function (e) {
-        //TweenLite.delayedCall(2, showQuote);
-        TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
-        TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
-      };
-      n.view.click = function (e) {
-        window.onPointClick && window.onPointClick(e, this, n);
-        //animationBenefit(this.id)
-      };
-      n.view.touchend = function (e) {
-        window.onPointClick && window.onPointClick(e, this);
-        //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
-        //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
-      };
-      n.view.touchendoutside = function (e) {
-        //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
-        //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
-      };
-      n.view.touchstart = function (e) {
-        //TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
-        //TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
-      };
-      n.view.tap = function (e) {
-        //animationBenefit(this.id)
-      };
+      (function(o){
+        n.view.mouseover = function (e) {
+          showQuote(this.textIt);
+          window.onPointOver && window.onPointOver(e, this, n, o);
+          TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
+          TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
+        };
+        n.view.mouseout = function (e) {
+          TweenLite.delayedCall(2, showQuote);
+          window.onPointOut && window.onPointOut(e, this, n, o);
+          TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
+          TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
+        };
+        n.view.click = function (e) {
+          window.onPointClick && window.onPointClick(e, this, n, o);
+          //animationBenefit(this.id)
+        };
+        n.view.touchend = function (e) {
+          window.onPointClick && window.onPointClick(e, this);
+          //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
+          //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
+        };
+        n.view.touchendoutside = function (e) {
+          //TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
+          //TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})
+        };
+        n.view.touchstart = function (e) {
+          //TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
+          //TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
+        };
+        n.view.tap = function (e) {
+          //animationBenefit(this.id)
+        };
+      }(o));
       PBISite.dotsContainer.addChild(n.view2);
       PBISite.dotsContainer.addChild(n.view);
       this.clickTags.push(n)

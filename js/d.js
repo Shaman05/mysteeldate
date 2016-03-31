@@ -142,7 +142,7 @@ function Diamond(e, t) {
       n.view.setInteractive(true);
       n.view.buttonMode = true;
       n.view.alpha = 0;
-      TweenLite.to(n.view, 1, {alpha: 1, ease: Sine.easeOut, overwrite: "all", delay: 7 + o * .5});
+      TweenLite.to(n.view, 1, {alpha: 1, ease: Sine.easeOut, overwrite: "all", delay: _CONF_.data_point + o * .5});
       n.view.id = o;
       n.view.view2 = n.view2;
       n.view.textIt = n.textIt;

@@ -36,19 +36,19 @@
   this.quotesArr = [
     [
       "<br>测试标题111",
-      "JAMES MASON",
+      "My steel data",
       6,
       27
     ],
     [
       "<br>测试标题22222",
-      "JAMES MASON",
+      "My steel data",
       6,
       27
     ],
     [
       "<br>测试标题333",
-      "JAMES MASON",
+      "My steel data",
       6,
       27
     ]

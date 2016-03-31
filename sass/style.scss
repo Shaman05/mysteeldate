@@ -156,3 +156,70 @@
         bottom: 0
     }
 }
+
+.stage_area {
+  height: 600px;
+  width: 900px;
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  perspective: 2000px;
+}
+
+.container {
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -200px 0 0 -300px;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.container.cur{
+  opacity: 1;
+  visibility: visible;
+}
+
+.item {
+  position: absolute;
+  height: 330px;
+  width: 390px;
+  left: 50%;
+  top: 50%;
+  margin: -170px 0 0 -200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+  font-size: 12px;
+  color: white;
+  background: #182746;
+  border: 5px solid #147675;
+}
+
+.item h4 {
+  margin: 0;
+  padding: 10px;
+}
+
+.item p {
+  margin: 0;
+  padding: 0 10px;
+  line-height: 20px;
+}
+
+.item0 {
+  transform: rotateY(0deg) translateZ(400px);
+}
+
+.item1 {
+  transform: rotateY(60deg) translateZ(400px);
+}
+
+.item2 {
+  transform: rotateY(-60deg) translateZ(400px);
+}
+#section0 #mainQuoteAll{
+  top: 360px;
+  left: 300px;
+}

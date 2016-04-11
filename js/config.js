@@ -14,9 +14,11 @@
 
   //canvas配置
   this._CONF_ = {
-    x: -500,
+    x: -400,
     data_point: 3,
-    rotate_deg: 0.001
+    rotate_deg: 0.001,
+    widthMax: 1920,
+    heightMax: 1080
   };
 
   this.pointText = [

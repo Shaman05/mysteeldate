@@ -23,11 +23,22 @@
     setTimeout(function(){
       $rotateContain.eq(0).addClass('cur');
     }, 2000);
-    $rotateContain.find('.item').on('mouseover', function(){
+    $rotateContain.find('.item').on('click', function(){
       var index = $(this).index();
-      var deg = index === 1 ? -60 : index === 2 ? 60 : 0;
+      var deg = index === 2 ? -60 : index === 0 ? 60 : 0;
       $(this).parents('.container')[0].style.transform = 'rotateY(' + deg + 'deg)';
     });
+
+    var $board = $('#section2').find('.board');
+    var $item = $('#s2_contain').find('.item');
+    $item.hover(function(){
+      var $this = $(this);
+      var index = $this.index();
+      $board.removeClass('cur').eq(index).addClass('cur');
+      $this.addClass('cur');
+    }, function(){
+      $(this).removeClass('cur');
+    })
   });
 
   var $mainQuote = $('#mainQuote');

@@ -12,7 +12,7 @@
 
     $('#fullpage').fullpage({
       anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-      sectionsColor: ['#0D2241', '#273A6D', '#093675', '#093675', '#093675', '#093675'],
+      sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
       navigation: true,
       verticalCentered: false, //内容是否垂直居中
       navigationPosition: 'right',

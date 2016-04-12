@@ -14,7 +14,10 @@
 
   //canvas配置
   this._CONF_ = {
-    x: -400,
+    x: function(){
+      return window.innerWidth > 1366 ? -500 : -400;
+    }(),
+    y: 50,
     data_point: 3,
     rotate_deg: 0.001,
     widthMax: 1920,

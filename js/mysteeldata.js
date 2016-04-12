@@ -41,7 +41,17 @@
     })
   });
 
+  var $mainQuoteAll = $('#mainQuoteAll');
   var $mainQuote = $('#mainQuote');
+  this.onCreateDiamond = function(diamond){
+    var position = diamond.diamondContainer.position;
+    console.log(diamond.diamondContainer.position);
+    console.log($mainQuoteAll.outerWidth(), $mainQuoteAll.outerHeight())
+    $mainQuoteAll.css({
+      left: position.x - $mainQuoteAll.outerWidth()/2,
+      top: position.y - $mainQuoteAll.outerHeight()/2
+    }).addClass('showMainQuoteAll');
+  };
   this.onPointClick = function(e, object, n, index){
     //todo
     $('.container').removeClass('cur').eq(index).addClass('cur');

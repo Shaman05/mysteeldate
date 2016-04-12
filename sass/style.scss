@@ -236,13 +236,13 @@
 }
 
 #section0 #mainQuoteAll {
-    top: 390px;
-    left: 380px;
+    top: 450px;
+    left: 270px;
   opacity: 0;
   transition: all 5s;
 }
 #section0.active{
-  #mainQuoteAll{
+  #mainQuoteAll.showMainQuoteAll{
     opacity: 1;
   }
 }
@@ -458,6 +458,96 @@
 
     }
 
+}
+
+$animateBorderColor: rgba(25, 30, 28, 0.5);
+$pulsateSize: 12px;
+$pulsateBigSize: 24px;
+.contain-zt-list{
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 20%;
+  bottom: 5%;
+  text-align: center;
+  .item{
+    height: 40%;
+    width: 28%;
+    margin: 2% 2%;
+    display: inline-block;
+    position: relative;
+    background: url(../img/s3_img.png) center center;
+    background-size:100% 100%;
+    color: #ffffff;
+    .item-inner{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+    }
+    h4,p{
+      position: absolute;
+      left: 0;
+      right: 0;
+      transition: all 0.3s;
+    }
+    h4{
+      height: 30px;
+      line-height: 30px;
+      font-size: 30px;
+      top: 50%;
+      margin-top: -15px;
+    }
+    p{
+      padding: 20px 30px;
+      background: rgba(255, 255, 255, 0.3);
+      text-align: left;
+      line-height: 20px;
+      height: 80px;
+      bottom: -120px;
+    }
+  }
+  .item:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  .item:hover{
+    -webkit-animation: pulsate-big 0.8s infinite ease-in-out alternate;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-timing-function: ease-out;
+    h4{
+      margin-top: -70px;
+    }
+    p{
+      bottom: 0;
+    }
+  }
+  .item:hover:after{
+    -webkit-animation: pulsate 0.8s infinite ease-in-out alternate;
+    -webkit-animation-timing-function: ease-out;
+  }
+}
+@-webkit-keyframes pulsate {
+  from {
+    box-shadow: 0 0 0 0 $animateBorderColor
+  }
+  to {
+    box-shadow: 0 0 0 $pulsateSize $animateBorderColor
+  }
+}
+@-webkit-keyframes pulsate-big {
+  from {
+    box-shadow: 0 0 0 0 $animateBorderColor
+  }
+  to {
+    box-shadow: 0 0 0 $pulsateBigSize $animateBorderColor
+  }
 }
 
 #section4 {

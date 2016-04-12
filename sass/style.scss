@@ -2,6 +2,7 @@
 @import 'base';
 @import 'function';
 @import 'ext/btn';
+@import 'ext/flexbox';
 @import 'jquery.fullPage';
 .clearfix:before,
 .clearfix:after {
@@ -387,6 +388,74 @@
   background: url(../img/damand_bg.png) center center;
     h1 {
         background: url(../img/tit-yjzt.png) center center;
+    }
+    .tit-warning{
+        height: 118px;
+        text-align: center;
+        @include font-fsc1($f-sty: $fontYaHei, $fs: 2.6em, $fc: #6D6879, $f-lh: 118px);
+    }
+    .zt-list{
+         position: absolute;
+         @include flexbox;
+         @include flex-wrap($value: wrap);
+         @include align-content($value: space-around);
+         @include justify-content($value:space-between);
+         top: 50%;
+         left: 50%;
+         width:80%;
+         height:70%;
+         overflow: hidden;
+         transform: translate(-50%, -50%);
+         li{
+            width: 30%;
+            height: 45%;
+            text-align: center;
+            .boxbg{
+                padding:5%;
+                height: 90%;
+                // background:#231E2D;
+                @include bgcolor-alpha($bgcolor: rgba(35, 30, 41, 0.6));
+                .imgbox{
+                    position:relative;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    background: url(../img/s3_img.png) center center;
+                    background-size:100% 100%;
+                    h4{
+                        position: absolute;
+                        margin: auto;
+                        left: 0;
+                        top:0;
+                        right: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 60px;
+                        @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 60px);
+                        font-weight: normal;
+                        text-shadow:5px 2px 6px #000;
+                        letter-spacing:4px;
+                         -webkit-transition: bottom 0.6s ease;
+                         -moz-transition: bottom 0.6s ease;
+                         -o-transition: bottom 0.6s ease;
+                         transition: bottom 0.6s ease;
+                         -webkit-transition: top 0.6s ease;
+                         -moz-transition: top 0.6s ease;
+                         -o-transition: top 0.6s ease;
+                         transition: top 0.6s ease;
+
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        h4{
+                            top:10px;
+                            bottom:inherit;
+                        }
+                    }
+                }
+            }
+         } 
+
     }
 
 }

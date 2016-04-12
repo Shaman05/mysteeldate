@@ -462,23 +462,24 @@
 
 $animateBorderColor: rgba(25, 30, 28, 0.5);
 $pulsateSize: 12px;
-$pulsateBigSize: 24px;
+$pulsateBigSize: 14px;
 .contain-zt-list{
   position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 20%;
-  bottom: 5%;
+  left: 8%;
+  right: 8%;
+  top: 18%;
+  bottom: 10%;
   text-align: center;
   .item{
     height: 40%;
-    width: 28%;
-    margin: 2% 2%;
+    width: 27%;
+    margin: 2% 2% 1%;
     display: inline-block;
     position: relative;
     background: url(../img/s3_img.png) center center;
-    background-size:100% 100%;
+    background-size: 100%;
     color: #ffffff;
+    border: $pulsateSize solid rgba(25, 30, 28, 1);
     .item-inner{
       position: absolute;
       top: 0;

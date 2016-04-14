@@ -76,6 +76,21 @@
     height: 100%
 }
 
+.tit-warning {
+    height: 118px;
+    text-align: center;
+    @include font-fsc1($f-sty: $fontYaHei, $fs: 2.6em, $fc: #6D6879, $f-lh: 118px);
+}
+
+.section-bottom-txt {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    padding: 15px 5%;
+    @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #fff, $f-lh: 220%);
+    @include bgcolor-alpha($bgcolor: rgba(255, 255, 255, 0.3));
+}
+
 .section {
     background-size: cover;
     h1 {
@@ -202,7 +217,7 @@
         color: white;
         background: #182746;
         border: 5px solid #147675;
-      cursor: pointer;
+        cursor: pointer;
     }
     .item h4 {
         margin: 0;
@@ -238,13 +253,14 @@
 #section0 #mainQuoteAll {
     top: 450px;
     left: 270px;
-  opacity: 0;
-  transition: all 5s;
+    opacity: 0;
+    transition: all 5s;
 }
-#section0.active{
-  #mainQuoteAll.showMainQuoteAll{
-    opacity: 1;
-  }
+
+#section0.active {
+    #mainQuoteAll.showMainQuoteAll {
+        opacity: 1;
+    }
 }
 
 #section1 {
@@ -276,14 +292,6 @@
         height: 360px;
         background: url(../img/s1_img@2.png);
     }
-    .s1-txt {
-        position: absolute;
-        left: 0;
-        bottom: 5%;
-        padding: 15px 5%;
-        @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #fff, $f-lh: 220%);
-        @include bgcolor-alpha($bgcolor: rgba(255, 255, 255, 0.3));
-    }
 }
 
 #section2 {
@@ -291,34 +299,34 @@
     h1 {
         background: url(../img/tit-tsyj.png) center center;
     }
-    .board{
-      opacity: 0;
-      display: inline-block;
-      position: absolute;
-      top: 50%;
-      right: 10%;
-      width:30%;
-      height:70%;
-      padding:20px;;
-      color:#fff;
-      transform: translate(0, -50%);
-      border:1px solid #929DD6;
-      @include bgcolor-alpha($bgcolor: rgba(255, 255, 255, 0.3));
-      h2{
-        margin-bottom: 1em;
-         @include font-fsc1($f-sty: $fontYaHei, $fs: 1.8em, $fc: #fff, $f-lh: 220%);
-      }
-      p{
-        @include font-fsc1($f-sty: $fontYaHei, $fs: 1.4em, $fc: #fff, $f-lh: 220%);
-      }
-      transition: all 0.5s;
+    .board {
+        opacity: 0;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        width: 25%;
+        height: 70%;
+        padding: 20px;
+        color: #fff;
+        transform: translate(0, -50%);
+        border: 1px solid #929DD6;
+        @include bgcolor-alpha($bgcolor: rgba(255, 255, 255, 0.3));
+        h2 {
+            margin-bottom: 1em;
+            @include font-fsc1($f-sty: $fontYaHei, $fs: 1.8em, $fc: #fff, $f-lh: 220%);
+        }
+        p {
+            @include font-fsc1($f-sty: $fontYaHei, $fs: 1.4em, $fc: #fff, $f-lh: 220%);
+        }
+        transition: all 0.5s;
     }
     .stage_layer {
         position: absolute;
-        height: 500px;
-        width: 500px;
+        height: 600px;
+        width: 660px;
         left: 13%;
-        top: 20%;
+        top: 15%;
         perspective: 1800px;
     }
     .contain {
@@ -331,11 +339,11 @@
         transform-style: preserve-3d;
         transition: all 1s;
         border-radius: 5px;
-        border:1px solid #8D71A9;
+        border: 1px solid #8D71A9;
     }
     &.active {
-        .board.cur{
-          opacity: 1;
+        .board.cur {
+            opacity: 1;
         }
         .contain {
             opacity: 1;
@@ -355,29 +363,30 @@
         opacity: 0.8;
         transform: scale(1);
         transition: all 0.5s;
-        border:1px solid #fff;
+        border: 1px solid #fff;
     }
-    .item.cur{
+    .item.cur {
         opacity: 1;
     }
     .item0 {
-      transform: translateX(50px) translateZ(150px);
-      background: url(../img/s2_img1.png) center center;
-      background-size: contain;
+        transform: translateX(50px) translateZ(150px);
+        background: url(../img/s2_img1.png) center center;
+        background-size: 100% 100%;
     }
-    .item0.cur{
+    .item0.cur {
         transform: scale(1.2) translateX(50px) translateZ(150px);
     }
     .item1 {
-        background: yellow;
         transform: translateZ(0px);
+        background: url(../img/s2_img2.png) center center;
+        background-size: 100% 100%;
     }
-    .item1.cur{
+    .item1.cur {
         transform: scale(1.2) translateZ(0px);
     }
-    .item2{
-      background: red;
-      transform: translateX(-50px) translateZ(-150px);
+    .item2 {
+        background: red;
+        transform: translateX(-50px) translateZ(-150px);
     }
     .item2.cur {
         transform: scale(1.2) translateX(-50px) translateZ(-150px);
@@ -385,191 +394,253 @@
 }
 
 #section3 {
-  background: url(../img/damand_bg.png) center center;
+    background: url(../img/damand_bg.png) center center;
     h1 {
         background: url(../img/tit-yjzt.png) center center;
     }
-    .tit-warning{
-        height: 118px;
-        text-align: center;
-        @include font-fsc1($f-sty: $fontYaHei, $fs: 2.6em, $fc: #6D6879, $f-lh: 118px);
-    }
-    .zt-list{
-         position: absolute;
-         @include flexbox;
-         @include flex-wrap($value: wrap);
-         @include align-content($value: space-around);
-         @include justify-content($value:space-between);
-         top: 50%;
-         left: 50%;
-         width:80%;
-         height:70%;
-         overflow: hidden;
-         transform: translate(-50%, -50%);
-         li{
+    .zt-list {
+        position: absolute;
+        @include flexbox;
+        @include flex-wrap($value: wrap);
+        @include align-content($value: space-around);
+        @include justify-content($value: space-between);
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 70%;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
+        li {
             width: 30%;
             height: 45%;
             text-align: center;
-            .boxbg{
-                padding:5%;
+            .boxbg {
+                padding: 5%;
                 height: 90%;
                 // background:#231E2D;
                 @include bgcolor-alpha($bgcolor: rgba(35, 30, 41, 0.6));
-                .imgbox{
-                    position:relative;
+                .imgbox {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     overflow: hidden;
                     background: url(../img/s3_img.png) center center;
-                    background-size:100% 100%;
-                    h4{
+                    background-size: 100% 100%;
+                    h4 {
                         position: absolute;
                         margin: auto;
                         left: 0;
-                        top:0;
+                        top: 0;
                         right: 0;
                         bottom: 0;
                         width: 100%;
                         height: 60px;
                         @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 60px);
                         font-weight: normal;
-                        text-shadow:5px 2px 6px #000;
-                        letter-spacing:4px;
-                         -webkit-transition: bottom 0.6s ease;
-                         -moz-transition: bottom 0.6s ease;
-                         -o-transition: bottom 0.6s ease;
-                         transition: bottom 0.6s ease;
-                         -webkit-transition: top 0.6s ease;
-                         -moz-transition: top 0.6s ease;
-                         -o-transition: top 0.6s ease;
-                         transition: top 0.6s ease;
-
+                        text-shadow: 5px 2px 6px #000;
+                        letter-spacing: 4px;
+                        -webkit-transition: bottom 0.6s ease;
+                        -moz-transition: bottom 0.6s ease;
+                        -o-transition: bottom 0.6s ease;
+                        transition: bottom 0.6s ease;
+                        -webkit-transition: top 0.6s ease;
+                        -moz-transition: top 0.6s ease;
+                        -o-transition: top 0.6s ease;
+                        transition: top 0.6s ease;
                     }
-                    &:hover{
+                    &:hover {
                         cursor: pointer;
-                        h4{
-                            top:10px;
-                            bottom:inherit;
+                        h4 {
+                            top: 10px;
+                            bottom: inherit;
                         }
                     }
                 }
             }
-         } 
-
+        }
     }
-
 }
 
-$animateBorderColor: rgba(25, 30, 28, 0.5);
+$animateBorderColor: rgba(25,30,28,0.5);
 $pulsateSize: 12px;
 $pulsateBigSize: 14px;
-.contain-zt-list{
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  top: 18%;
-  bottom: 10%;
-  text-align: center;
-  .item{
-    height: 40%;
-    width: 27%;
-    margin: 2% 2% 1%;
-    display: inline-block;
-    position: relative;
-    background: url(../img/s3_img.png) center center;
-    background-size: 100%;
-    color: #ffffff;
-    border: $pulsateSize solid rgba(25, 30, 28, 1);
-    .item-inner{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      overflow: hidden;
-    }
-    h4,p{
-      position: absolute;
-      left: 0;
-      right: 0;
-      transition: all 0.3s;
-    }
-    h4{
-      height: 30px;
-      line-height: 30px;
-      font-size: 30px;
-      top: 50%;
-      margin-top: -15px;
-    }
-    p{
-      padding: 20px 30px;
-      background: rgba(255, 255, 255, 0.3);
-      text-align: left;
-      line-height: 20px;
-      height: 80px;
-      bottom: -120px;
-    }
-  }
-  .item:after{
-    content: '';
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
+.contain-zt-list {
     position: absolute;
-  }
-  .item:hover{
-    -webkit-animation: pulsate-big 0.8s infinite ease-in-out alternate;
-    -webkit-animation-delay: 0.5s;
-    -webkit-animation-timing-function: ease-out;
-    h4{
-      margin-top: -70px;
+    left: 8%;
+    right: 8%;
+    top: 18%;
+    bottom: 10%;
+    text-align: center;
+    .item {
+        height: 40%;
+        width: 27%;
+        margin: 2% 2% 1%;
+        display: inline-block;
+        position: relative;
+        background: url(../img/s3_img.png) center center;
+        background-size: 100%;
+        color: #ffffff;
+        border: $pulsateSize solid rgba(25, 30, 28, 1);
+        .item-inner {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+        }
+        h4,
+        p {
+            position: absolute;
+            left: 0;
+            right: 0;
+            transition: all 0.3s;
+        }
+        h4 {
+            height: 30px;
+            top: 50%;
+            margin-top: -15px;
+            @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 30px);
+            font-weight: normal;
+            text-shadow: 5px 2px 6px #000;
+            letter-spacing: 4px;
+        }
+        p {
+            bottom: -120px;
+            padding: 20px 30px;
+            height: 80px;
+            text-align: left;
+            @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #fff, $f-lh: 28px);
+            background: rgba(255, 255, 255, 0.3);
+        }
     }
-    p{
-      bottom: 0;
+    .item:after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
     }
-  }
-  .item:hover:after{
-    -webkit-animation: pulsate 0.8s infinite ease-in-out alternate;
-    -webkit-animation-timing-function: ease-out;
-  }
+    .item:hover {
+        -webkit-animation: pulsate-big 0.8s infinite ease-in-out alternate;
+        -webkit-animation-delay: 0.5s;
+        -webkit-animation-timing-function: ease-out;
+        h4 {
+            margin-top: -70px;
+        }
+        p {
+            bottom: 0;
+        }
+    }
+    .item:hover:after {
+        -webkit-animation: pulsate 0.8s infinite ease-in-out alternate;
+        -webkit-animation-timing-function: ease-out;
+    }
 }
+
 @-webkit-keyframes pulsate {
-  from {
-    box-shadow: 0 0 0 0 $animateBorderColor
-  }
-  to {
-    box-shadow: 0 0 0 $pulsateSize $animateBorderColor
-  }
+    from {
+        box-shadow: 0 0 0 0 $animateBorderColor
+    }
+    to {
+        box-shadow: 0 0 0 $pulsateSize $animateBorderColor
+    }
 }
+
 @-webkit-keyframes pulsate-big {
-  from {
-    box-shadow: 0 0 0 0 $animateBorderColor
-  }
-  to {
-    box-shadow: 0 0 0 $pulsateBigSize $animateBorderColor
-  }
+    from {
+        box-shadow: 0 0 0 0 $animateBorderColor
+    }
+    to {
+        box-shadow: 0 0 0 $pulsateBigSize $animateBorderColor
+    }
 }
 
 #section4 {
-  background: url(../img/damand_bg.png) center center;
+    background: url(../img/damand_bg.png) center center;
     h1 {
         background: url(../img/tit-ljtj.png) center center;
     }
+    .logic-switch{
+         position: absolute;
+         opacity: 0;
+         left: 5%;
+         top: 20%;
+         bottom:10%;
+         width: 20%;
+         text-align: center;
+         .logic-switch-btn{
+            display: inline-block;
+            width: 80%;
+            margin: 0 auto 1%;
+            height:20%;
+            border:4px solid #fff;
+            text-align: center;
+         }
+         
+    }
+    .logic-imgs{
+         position: absolute;
+         opacity: 0;
+         right: 5%;
+         top: 18%;
+         bottom:10%;
+         width: 70%;
+         li{
+             position: relative;
+             margin:2% 1%;
+             padding:2%;
+             display: inline-block;
+             height: 40%;
+             width: 26%;
+             border: 1px solid #876093;
+             @include bgcolor-alpha($bgcolor: rgba(87, 42, 79, 0.4));
+           .box{
+                 display: inline-block;
+                 height: 100%;
+                 width:100%;
+                 color: #ffffff;
+                 background: url(../img/s3_img.png) center center no-repeat;
+                 background-size: 100% 100%;
+                 text-align: center;
+                 h4{
+                        position: absolute;
+                        margin: auto;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 60px;
+                        font-weight: normal;
+                        letter-spacing: 4px;
+                        @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 60px);
+                 }
+           }
+         }
+    }
 
+    &.active{
+        .logic-imgs{
+            opacity: 1;
+        }
+        .logic-switch{
+            opacity: 1;
+        }
+    }
 }
 
-
 #section5 {
-  .s5-top{
-    position:absolute;
-    left: 0;
-    top:0;
-    width: 100%;
-    height: 8px;
-    background: url(../img/s5_top_bg.png) repeat-x left top;
-   }
-   .s5-logo{
+    .s5-top {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 8px;
+        background: url(../img/s5_top_bg.png) repeat-x left top;
+    }
+    .s5-logo {
         display: inline-block;
         position: absolute;
         top: 10%;
@@ -578,8 +649,8 @@ $pulsateBigSize: 14px;
         width: 220px;
         height: 150px;
         background: url(../img/s1_logo@2.png);
-        background-size:100% 100%;
-   }
+        background-size: 100% 100%;
+    }
 }
 
 @import 'media';

@@ -548,6 +548,15 @@ $pulsateBigSize: 14px;
     }
 }
 
+@-moz-keyframes pulsate {
+    from {
+        box-shadow: 0 0 0 0 $animateBorderColor
+    }
+    to {
+        box-shadow: 0 0 0 $pulsateSize $animateBorderColor
+    }
+}
+
 @-webkit-keyframes pulsate-big {
     from {
         box-shadow: 0 0 0 0 $animateBorderColor
@@ -571,12 +580,19 @@ $pulsateBigSize: 14px;
          width: 20%;
          text-align: center;
          .logic-switch-btn{
-            display: inline-block;
-            width: 80%;
-            margin: 0 auto 1%;
-            height:20%;
-            border:4px solid #fff;
+            display: block;
+            width: 230px;;
+            margin: 18% auto 30px;
+            height:74px;
+            border:2px solid #fff;
+            @include border-radius(40px);
             text-align: center;
+            @include font-fsc1($f-sty: $fontYaHei, $fs:24px, $fc: #fff, $f-lh: 68px);
+            cursor: pointer;
+            &.active{
+                color:#4B2073;
+                background:#fff;
+            }
          }
          
     }
@@ -606,6 +622,7 @@ $pulsateBigSize: 14px;
                  text-align: center;
                  h4{
                         position: absolute;
+                        z-index: 1;
                         margin: auto;
                         left: 0;
                         top: 0;
@@ -616,6 +633,42 @@ $pulsateBigSize: 14px;
                         font-weight: normal;
                         letter-spacing: 4px;
                         @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 60px);
+                        webkit-transition: opacity 0.6s ease;
+                        -moz-transition: opacity 0.6s ease;
+                        -o-transition: opacity 0.6s ease;
+                        transition: opacity 0.6s ease;
+                 }
+                 h3{
+                    @extend h4;
+                    opacity: 0;
+                    bottom:-160%;
+                    color:#000;
+                    webkit-transition: opacity 1.2s ease;
+                        -moz-transition: opacity 1.2s ease;
+                        -o-transition: opacity 1.2s ease;
+                        transition: opacity 1.2s ease;
+                 }
+                 p{  
+                     position: absolute;
+                     z-index: 1;
+                     left: 0;
+                     bottom:-60%;
+                     opacity: 0;
+                     text-align: left;
+                     @include font-fsc1($f-sty: $fontYaHei, $fs: 18px, $fc: #fff, $f-lh:200%);
+                     webkit-transition: opacity 1.2s ease;
+                     -moz-transition: opacity 1.2s ease;
+                     -o-transition: opacity 1.2s ease;
+                     transition: opacity 1.2s ease;
+                 }
+
+                 &:hover{
+                    h4{
+                        opacity: 0;
+                    }
+                    p,h3{
+                        opacity: 1;
+                    }
                  }
            }
          }

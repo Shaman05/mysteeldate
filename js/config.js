@@ -24,6 +24,13 @@
     heightMax: 1080
   };
 
+  //文本显示定时器
+  this.beginTextShowTimer = null;
+  this.textShowTimer = null;
+  //文本动画切换间隔时间
+  this.textShowInterval = 5000;
+
+  //三个点对应的文本
   this.pointText = [
     {
       title: '热门数据',
@@ -38,25 +45,13 @@
       desc: '最新数据预测最新数据预测'
     }
   ];
+
+  //循环播放文本，添加更多则按格式 ['标题xxx', '内容xxx'] 添加到数组里
   this.quotesArr = [
-    [
-      "<br>测试标题111",
-      "My steel data",
-      6,
-      27
-    ],
-    [
-      "<br>测试标题22222",
-      "My steel data",
-      6,
-      27
-    ],
-    [
-      "<br>测试标题333",
-      "My steel data",
-      6,
-      27
-    ]
+    ['测试标题111', '测试内容111111111'],
+    ['测试标题222', '测试内容22222'],
+    ['测试标题33', '测试内容1111333'],
+    ['测试标题4', '测试内容44444']
   ];
 
 }.call(window));

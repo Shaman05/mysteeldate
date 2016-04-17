@@ -148,13 +148,18 @@ function Diamond(e, t) {
       n.view.textIt = n.textIt;
       (function(o){
         n.view.mouseover = function (e) {
-          showQuote(this.textIt);
+          //showQuote(this.textIt);
+          clearTimeout(window.textShowTimer);
+          clearTimeout(window.beginTextShowTimer);
           window.onPointOver && window.onPointOver(e, this, n, o);
           TweenLite.to(this.view2, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"});
           TweenLite.to(this, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"})
         };
         n.view.mouseout = function (e) {
-          TweenLite.delayedCall(2, showQuote);
+          //TweenLite.delayedCall(2, showQuote);
+          window.textShowTimer = setInterval(function(){
+            window.textShow && window.textShow();
+          }, window.textShowInterval);
           window.onPointOut && window.onPointOut(e, this, n, o);
           TweenLite.to(this.view2, .2, {alpha: 0, ease: Sine.easeOut, overwrite: "all"});
           TweenLite.to(this, .4, {alpha: 1, ease: Sine.easeOut, overwrite: "all"})

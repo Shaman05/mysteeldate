@@ -38,26 +38,104 @@
       $this.addClass('cur');
     }, function(){
       $(this).removeClass('cur');
-    })
+    });
+
+    var $section4 = $('#section4');
+    var $logicSwitch = $section4.find('.logic-switch-btn');
+    var $logicImgs = $section4.find('.logic-imgs');
+    $logicImgs.eq(0).addClass('active');
+    $logicSwitch.on('click', function(){
+      var $this = $(this);
+      $logicSwitch.removeClass('active');
+      $this.addClass('active');
+      $logicImgs.removeClass('active').eq($this.index()).addClass('active');
+    });
   });
 
   var $mainQuoteAll = $('#mainQuoteAll');
   var $mainQuote = $('#mainQuote');
   this.onCreateDiamond = function(diamond){
     var position = diamond.diamondContainer.position;
-    console.log(diamond.diamondContainer.position);
-    console.log($mainQuoteAll.outerWidth(), $mainQuoteAll.outerHeight())
     $mainQuoteAll.css({
       left: position.x - $mainQuoteAll.outerWidth()/2,
       top: position.y - $mainQuoteAll.outerHeight()/2
     }).addClass('showMainQuoteAll');
   };
-  this.onPointClick = function(e, object, n, index){
-    //todo
+
+  this.onPointOver = function(e, object, n, index){
+    setMainQuoteText(pointText[index]['title'], pointText[index]['desc']);
     $('.container').removeClass('cur').eq(index).addClass('cur');
   };
-  this.onPointOver = function(e, object, n, index){
-    $mainQuote.html(pointText[index]['title'] + '<br>' + pointText[index]['desc']);
+
+  function setMainQuoteText(title, content){
+    $mainQuote.html('<h4>' + title + '</h4><p>' + content + '</p>');
+  }
+
+  this.textShowIndex = 0;
+  this.beginTextShowTimer = setTimeout(function(){
+    window.textShowTimer = setInterval(function(){
+      window.textShow();
+    }, window.textShowInterval);
+  }, 7000);
+
+  this.textShow = function(){
+    var textArr = window.quotesArr[window.textShowIndex];
+    TweenLite.to("#lineQuote2", .3, {
+      scaleX: 0,
+      transformOrigin: "left",
+      ease: Power4.easeIn
+    });
+    TweenLite.to("#lineQuote1", .3, {
+      scaleX: 0,
+      transformOrigin: "right",
+      ease: Power4.easeIn
+    });
+    TweenLite.to("#mainQuote", .5, {
+      y: 70,
+      autoAlpha: 0,
+      ease: Power1.easeIn,
+      onComplete: function(){
+        setMainQuoteText(textArr[0], textArr[1]);
+      },
+      onCompleteParams: []
+    });
+    TweenLite.to("#secondQuote", .5, {
+      y: 30,
+      ease: Power1.easeIn,
+      onComplete: function(){
+      },
+      onCompleteParams: []
+    });
+    TweenLite.to("#lineQuote2", 1, {
+      scaleX: 1,
+      transformOrigin: "left",
+      ease: Power4.easeOut,
+      delay: .7
+    });
+    TweenLite.to("#lineQuote1", 1, {
+      scaleX: 1,
+      transformOrigin: "right",
+      ease: Power4.easeOut,
+      delay: .7
+    });
+    TweenLite.to("#mainQuote", 2, {
+      y: 0,
+      autoAlpha: 1,
+      ease: Power4.easeOut,
+      delay: 1
+    });
+    TweenLite.to("#secondQuote", 1, {
+      y: 0,
+      ease: Power1.easeOut,
+      delay: .5
+    });
+    TweenLite.to("#lineQuote3", 1, {
+      autoAlpha: 0,
+      scaleX: 0,
+      ease: Power4.easeOut,
+      delay: 0
+    });
+    window.textShowIndex = window.textShowIndex > window.quotesArr.length - 2 ? 0 : window.textShowIndex + 1;
   };
 
 }.call(window));

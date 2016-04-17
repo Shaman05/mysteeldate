@@ -109,6 +109,15 @@
     }
 }
 
+#mainQuote{
+  h4{
+    font-size: 27px;
+  }
+  p{
+    text-align: left;
+  }
+}
+
 #section0 {
     background-image: url(../img/s0_bg.png);
     background-repeat: no-repeat;
@@ -477,7 +486,7 @@ $pulsateBigSize: 14px;
         margin: 2% 2% 1%;
         display: inline-block;
         position: relative;
-        background: url(../img/s3_img.png) center center;
+        background: url(../img/s3_img.png) no-repeat center center;
         background-size: 100%;
         color: #ffffff;
         border: $pulsateSize solid rgba(25, 30, 28, 1);
@@ -603,6 +612,7 @@ $pulsateBigSize: 14px;
          top: 18%;
          bottom:10%;
          width: 70%;
+      transition: all 0.5s;
          li{
              position: relative;
              margin:2% 1%;
@@ -672,12 +682,12 @@ $pulsateBigSize: 14px;
                  }
            }
          }
+      &.active{
+        opacity: 1;
+      }
     }
 
     &.active{
-        .logic-imgs{
-            opacity: 1;
-        }
         .logic-switch{
             opacity: 1;
         }

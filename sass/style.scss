@@ -14,6 +14,12 @@
     clear: both;
 }
 
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
 .top-nav {
     position: fixed;
     z-index: 9;
@@ -76,6 +82,11 @@
     height: 100%
 }
 
+.whfull {
+    width: 100%;
+    height: 100%;
+}
+
 .tit-warning {
     height: 118px;
     text-align: center;
@@ -109,13 +120,13 @@
     }
 }
 
-#mainQuote{
-  h4{
-    font-size: 27px;
-  }
-  p{
-    text-align: left;
-  }
+#mainQuote {
+    h4 {
+        font-size: 27px;
+    }
+    p {
+        text-align: left;
+    }
 }
 
 #section0 {
@@ -239,12 +250,24 @@
     }
     .item0 {
         transform: rotateY(-60deg) translateZ(300px);
+        -ms-transform: rotateY(-60deg) translateZ(300px);
+        -moz-transform: rotateY(-60deg) translateZ(300px);
+        -webkit-transform: rotateY(-60deg) translateZ(300px);
+        -o-transform: rotateY(-60deg) translateZ(300px);
     }
     .item1 {
         transform: rotateY(0deg) translateZ(300px);
+        -ms-transform: rotateY(0deg) translateZ(300px);
+        -moz-transform: rotateY(0deg) translateZ(300px);
+        -webkit-transform: rotateY(0deg) translateZ(300px);
+        -o-transform: rotateY(0deg) translateZ(300px);
     }
     .item2 {
         transform: rotateY(60deg) translateZ(300px);
+        -ms-transform: rotateY(60deg) translateZ(300px);
+        -moz-transform: rotateY(60deg) translateZ(300px);
+        -webkit-transform: rotateY(60deg) translateZ(300px);
+        -o-transform: rotateY(60deg) translateZ(300px);
     }
 }
 
@@ -266,14 +289,14 @@
     transition: all 5s;
 }
 
-#section0.active {
+#section0.swiper-slide-active {
     #mainQuoteAll.showMainQuoteAll {
         opacity: 1;
     }
 }
 
 #section1 {
-    background: url(../img/damand_bg.png) center center;
+    background: url(../img/damand_bg.png) center center #0A2F41;
     h1 {
         background: url(../img/tit-glsj.png) center center;
     }
@@ -304,7 +327,7 @@
 }
 
 #section2 {
-    background: url(../img/damand_bg.png) center center;
+    background: url(../img/damand_bg.png) center center #444081;
     h1 {
         background: url(../img/tit-tsyj.png) center center;
     }
@@ -350,7 +373,7 @@
         border-radius: 5px;
         border: 1px solid #8D71A9;
     }
-    &.active {
+    &.swiper-slide-active {
         .board.cur {
             opacity: 1;
         }
@@ -403,7 +426,7 @@
 }
 
 #section3 {
-    background: url(../img/damand_bg.png) center center;
+    background: url(../img/damand_bg.png) center center #28233B;
     h1 {
         background: url(../img/tit-yjzt.png) center center;
     }
@@ -470,7 +493,10 @@
     }
 }
 
-$animateBorderColor: rgba(25,30,28,0.5);
+$animateBorderColor: rgba(25,
+30,
+28,
+0.5);
 $pulsateSize: 12px;
 $pulsateBigSize: 14px;
 .contain-zt-list {
@@ -576,125 +602,135 @@ $pulsateBigSize: 14px;
 }
 
 #section4 {
-    background: url(../img/damand_bg.png) center center;
+    background: url(../img/damand_bg.png) center center #502373;
     h1 {
         background: url(../img/tit-ljtj.png) center center;
     }
-    .logic-switch{
-         position: absolute;
-         opacity: 0;
-         left: 5%;
-         top: 20%;
-         bottom:10%;
-         width: 20%;
-         text-align: center;
-         .logic-switch-btn{
+    .logic-switch {
+        position: absolute;
+        opacity: 0;
+        left: 5%;
+        top: 20%;
+        bottom: 10%;
+        width: 20%;
+        text-align: center;
+        .logic-switch-btn {
             display: block;
-            width: 230px;;
+            width: 230px;
+            ;
             margin: 18% auto 30px;
-            height:74px;
-            border:2px solid #fff;
+            height: 74px;
+            border: 2px solid #fff;
             @include border-radius(40px);
             text-align: center;
-            @include font-fsc1($f-sty: $fontYaHei, $fs:24px, $fc: #fff, $f-lh: 68px);
+            @include font-fsc1($f-sty: $fontYaHei, $fs: 24px, $fc: #fff, $f-lh: 68px);
             cursor: pointer;
-            &.active{
-                color:#4B2073;
-                background:#fff;
+            &.active {
+                color: #4B2073;
+                background: #fff;
             }
-         }
-         
+        }
     }
-    .logic-imgs{
-         position: absolute;
-         opacity: 0;
-         right: 5%;
-         top: 18%;
-         bottom:10%;
-         width: 70%;
-      transition: all 0.5s;
-         li{
-             position: relative;
-             margin:2% 1%;
-             padding:2%;
-             display: inline-block;
-             height: 40%;
-             width: 26%;
-             border: 1px solid #876093;
-             @include bgcolor-alpha($bgcolor: rgba(87, 42, 79, 0.4));
-           .box{
-                 display: inline-block;
-                 height: 100%;
-                 width:100%;
-                 color: #ffffff;
-                 background: url(../img/s3_img.png) center center no-repeat;
-                 background-size: 100% 100%;
-                 text-align: center;
-                 h4{
-                        position: absolute;
-                        z-index: 1;
-                        margin: auto;
-                        left: 0;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        width: 100%;
-                        height: 60px;
-                        font-weight: normal;
-                        letter-spacing: 4px;
-                        @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 60px);
-                        webkit-transition: opacity 0.6s ease;
-                        -moz-transition: opacity 0.6s ease;
-                        -o-transition: opacity 0.6s ease;
-                        transition: opacity 0.6s ease;
-                 }
-                 h3{
+    .logic-imgs {
+        position: absolute;
+        opacity: 0;
+        right: 5%;
+        top: 18%;
+        bottom: 10%;
+        width: 70%;
+        transition: all 0.5s;
+        li {
+            position: relative;
+            margin: 2% 1%;
+            padding: 2%;
+            display: inline-block;
+            height: 40%;
+            width: 26%;
+            border: 1px solid #876093;
+            @include bgcolor-alpha($bgcolor: rgba(87, 42, 79, 0.4));
+            .box {
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                color: #ffffff;
+               // background: url(../img/s3_img.png) center center no-repeat;
+                background-size: 100% 100%;
+                text-align: center;
+                .swiper-container{
+                    width: 100%;
+                    height: 100%;
+                    .swiper-slide {
+                    background-position: center;
+                    background-size: cover;
+                    width: 300px;
+                    height: 300px;
+                }
+                }
+                h4 {
+                    position: absolute;
+                    z-index: 1;
+                    margin: auto;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 60px;
+                    font-weight: normal;
+                    letter-spacing: 4px;
+                    @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 60px);
+                    webkit-transition: opacity 0.6s ease;
+                    -moz-transition: opacity 0.6s ease;
+                    -o-transition: opacity 0.6s ease;
+                    transition: opacity 0.6s ease;
+                }
+                h3 {
                     @extend h4;
                     opacity: 0;
-                    bottom:-160%;
-                    color:#000;
+                    bottom: -160%;
+                    color: #000;
                     webkit-transition: opacity 1.2s ease;
-                        -moz-transition: opacity 1.2s ease;
-                        -o-transition: opacity 1.2s ease;
-                        transition: opacity 1.2s ease;
-                 }
-                 p{  
-                     position: absolute;
-                     z-index: 1;
-                     left: 0;
-                     bottom:-60%;
-                     opacity: 0;
-                     text-align: left;
-                     @include font-fsc1($f-sty: $fontYaHei, $fs: 18px, $fc: #fff, $f-lh:200%);
-                     webkit-transition: opacity 1.2s ease;
-                     -moz-transition: opacity 1.2s ease;
-                     -o-transition: opacity 1.2s ease;
-                     transition: opacity 1.2s ease;
-                 }
-
-                 &:hover{
-                    h4{
+                    -moz-transition: opacity 1.2s ease;
+                    -o-transition: opacity 1.2s ease;
+                    transition: opacity 1.2s ease;
+                }
+                p {
+                    position: absolute;
+                    z-index: 1;
+                    left: 0;
+                    bottom: -60%;
+                    opacity: 0;
+                    text-align: left;
+                    @include font-fsc1($f-sty: $fontYaHei, $fs: 18px, $fc: #fff, $f-lh: 200%);
+                    webkit-transition: opacity 1.2s ease;
+                    -moz-transition: opacity 1.2s ease;
+                    -o-transition: opacity 1.2s ease;
+                    transition: opacity 1.2s ease;
+                }
+                &:hover {
+                    h4 {
                         opacity: 0;
                     }
-                    p,h3{
+                    p,
+                    h3 {
                         opacity: 1;
                     }
-                 }
-           }
-         }
-      &.active{
-        opacity: 1;
-      }
+                }
+            }
+        }
+        &.active {
+            opacity: 1;
+        }
     }
-
-    &.active{
-        .logic-switch{
+    &.swiper-slide-active {
+        .logic-switch {
             opacity: 1;
         }
     }
 }
 
 #section5 {
+    background:#1A062A;
     .s5-top {
         position: absolute;
         left: 0;

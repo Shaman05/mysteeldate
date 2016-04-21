@@ -9,15 +9,23 @@
   $(function(){
 
     console.log('page loaded!');
-
-    $('#fullpage').fullpage({
-      anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-      sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
-      navigation: true,
-      verticalCentered: false, //内容是否垂直居中
-      navigationPosition: 'right',
-      navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        mousewheelControl : true,
+        noSwiping : true,
+        direction: 'vertical'
     });
+
+
+    // $('#fullpage').fullpage({
+    //   anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+    //   sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
+    //   navigation: true,
+    //   verticalCentered: false, //内容是否垂直居中
+    //   navigationPosition: 'right',
+    //   navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
+    // });
 
     var $rotateContain = $('.container');
     setTimeout(function(){

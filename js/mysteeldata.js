@@ -9,7 +9,7 @@
   $(function(){
 
     console.log('page loaded!');
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.whfull', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         mousewheelControl : true,
@@ -17,6 +17,39 @@
         direction: 'vertical'
     });
 
+    var swiperflip1 = new Swiper('#swiper-effect1', {
+        effect: 'flip',
+        grabCursor: true,
+        onClick: function(swiper){
+          alert('你点了Swiper;');
+        }
+
+    });
+    var swiperflip2 = new Swiper('#swiper-effect2', {
+        effect: 'flip',
+        grabCursor: true
+
+    });
+    var swiperflip3 = new Swiper('#swiper-effect3', {
+        effect: 'flip',
+        grabCursor: true
+
+    });
+    var swiperflip4 = new Swiper('#swiper-effect4', {
+        effect: 'flip',
+        grabCursor: true
+
+    });
+    var swiperflip5 = new Swiper('#swiper-effect5', {
+        effect: 'flip',
+        grabCursor: true
+
+    });
+    var swiperflip6 = new Swiper('#swiper-effect6', {
+        effect: 'flip',
+        grabCursor: true
+
+});
 
     // $('#fullpage').fullpage({
     //   anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],

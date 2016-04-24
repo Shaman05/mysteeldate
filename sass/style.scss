@@ -660,14 +660,15 @@ $pulsateBigSize: 14px;
                     width: 100%;
                     height: 100%;
                     .swiper-slide {
-                    background-position: center;
-                    background-size: cover;
-                    width: 300px;
-                    height: 300px;
-                }
+                        background-position: center;
+                        background-size: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
                 h4 {
                     position: absolute;
+                    opacity: 0;
                     z-index: 1;
                     margin: auto;
                     left: 0;
@@ -698,7 +699,7 @@ $pulsateBigSize: 14px;
                     position: absolute;
                     z-index: 1;
                     left: 0;
-                    bottom: -60%;
+                    bottom: -70%;
                     opacity: 0;
                     text-align: left;
                     @include font-fsc1($f-sty: $fontYaHei, $fs: 18px, $fc: #fff, $f-lh: 200%);
@@ -707,14 +708,26 @@ $pulsateBigSize: 14px;
                     -o-transition: opacity 1.2s ease;
                     transition: opacity 1.2s ease;
                 }
+                .swiper-slide-active{
+                     h4{
+                         opacity: 1;
+                     }
+                     h3{
+                         opacity:0;
+                     }
+
+                }
                 &:hover {
-                    h4 {
-                        opacity: 0;
-                    }
-                    p,
-                    h3 {
-                        opacity: 1;
-                    }
+                    .swiper-slide-active{
+                         h4 {
+                             opacity: 0;
+                         }
+                         p,
+                         h3 {
+                             opacity: 1;
+                         }
+                    
+                     }
                 }
             }
         }

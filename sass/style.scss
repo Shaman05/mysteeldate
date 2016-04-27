@@ -204,12 +204,20 @@ body {
         bottom: 0
     }
     .stage_area {
-        height: 320px;
-        width: 320px;
+        height: 500px;
+        width: 1000px;
         position: absolute;
-        bottom: 200px;
-        right: 300px;
-        perspective: 1000px;
+        bottom: 300px;
+        right: 70px;
+        .swiper-container{
+            height: 80%;
+            width: 90%;
+            margin: 20% auto;
+            .swiper-wrapper{
+                height: 100%;
+                width: 45%;
+            }
+        }
     }
     .container {
         height: 100%;
@@ -726,7 +734,7 @@ $pulsateBigSize: 14px;
                          h3 {
                              opacity: 1;
                          }
-                    
+
                      }
                 }
             }

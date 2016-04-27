@@ -1,66 +1,62 @@
 @media only screen and (max-width: 1600px) {
-  #section0 {
-    #mainQuoteAll {
-      top: 320px;
-      left: 230px;
+    #section0 {
+        #mainQuoteAll {
+            top: 320px;
+            left: 230px;
+        }
     }
-  }
 }
 
-@media only screen and (max-width: 1366px){
-  #section0{
-    #mainQuoteAll{
-      top: 295px;
-      left: 110px;
+@media only screen and (max-width: 1366px) {
+    #section0 {
+        #mainQuoteAll {
+            top: 295px;
+            left: 110px;
+        }
+        #mainQuote {
+            font-size: 20px;
+            line-height: 26px;
+        }
     }
-    #mainQuote{
-      font-size: 20px;
-      line-height: 26px;
+    #section0 {
+        .stage_area {
+            height: 400px;
+            width: 600px;
+            right: 50px;
+            bottom: 50px;
+            padding: 0 50px;
+            .swiper-container{
+                left: 50px;
+                right: 50px;
+            }
+        }
     }
-  }
-  #section0{
-    .stage_area{
-      height: 280px;
-      width: 280px;
-      right: 230px;
-      bottom: 100px;
-      .item0 {
-        transform: rotateY(-60deg) translateZ(280px);
-      }
-      .item1 {
-        transform: rotateY(0deg) translateZ(280px);
-      }
-      .item2 {
-        transform: rotateY(60deg) translateZ(280px);
-      }
+    #section2 {
+        .stage_layer {
+            height: 360px;
+            width: 360px;
+            left: 10%;
+            top: 25%;
+            .item0 {
+                transform: translateX(30px) translateZ(100px);
+            }
+            .item0.cur {
+                transform: scale(1.2) translateX(30px) translateZ(100px);
+            }
+            .item1 {
+                background: yellow;
+                transform: translateZ(0px);
+            }
+            .item1.cur {
+                transform: scale(1.2) translateZ(0px);
+            }
+            .item2 {
+                background: red;
+                transform: translateX(-30px) translateZ(-100px);
+            }
+            .item2.cur {
+                transform: scale(1.2) translateX(-30px) translateZ(-100px);
+            }
+        }
     }
-  }
-  #section2{
-    .stage_layer{
-      height: 360px;
-      width: 360px;
-      left: 10%;
-      top: 25%;
-      .item0 {
-        transform: translateX(30px) translateZ(100px);
-      }
-      .item0.cur{
-        transform: scale(1.2) translateX(30px) translateZ(100px);
-      }
-      .item1 {
-        background: yellow;
-        transform: translateZ(0px);
-      }
-      .item1.cur{
-        transform: scale(1.2) translateZ(0px);
-      }
-      .item2{
-        background: red;
-        transform: translateX(-30px) translateZ(-100px);
-      }
-      .item2.cur {
-        transform: scale(1.2) translateX(-30px) translateZ(-100px);
-      }
-    }
-  }
 }

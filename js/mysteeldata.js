@@ -8,8 +8,7 @@
 
     $(function (){
 
-        console.log('page loaded!');
-        new Swiper('#stage_area1', {
+        var page1Options = {
             effect: 'coverflow',
             initialSlide: 1,
             grabCursor: true,
@@ -22,7 +21,10 @@
                 modifier: 2,
                 slideShadows : true
             }
-        });
+        };
+        new Swiper('#stage_area1', page1Options);
+        new Swiper('#stage_area2', page1Options);
+        new Swiper('#stage_area3', page1Options);
 
         var swiper = new Swiper('.whfull', {
             pagination: '.swiper-pagination',
@@ -118,9 +120,10 @@
         }).addClass('showMainQuoteAll');
     };
 
+    var $slideBoard = $('#slideBoard');
     this.onPointOver = function (e, object, n, index){
         setMainQuoteText(pointText[index]['title'], pointText[index]['desc']);
-        $('.container').removeClass('cur').eq(index).addClass('cur');
+        $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');
     };
 
     function setMainQuoteText(title, content){

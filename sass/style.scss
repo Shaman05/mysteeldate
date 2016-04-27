@@ -205,17 +205,46 @@ body {
     }
     .stage_area {
         height: 500px;
-        width: 1000px;
+        width: 800px;
+        padding: 0 100px;
         position: absolute;
-        bottom: 300px;
+        bottom: 100px;
         right: 70px;
+        overflow: hidden;
         .swiper-container{
-            height: 80%;
-            width: 90%;
-            margin: 20% auto;
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            left: 100px;
+            right: 100px;
+            overflow: visible;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
             .swiper-wrapper{
-                height: 100%;
+                height: 90%;
                 width: 45%;
+            }
+        }
+        .swiper-container.cur{
+            opacity: 1;
+            visibility: visible;
+        }
+        .swiper-slide{
+            background: #182746;
+            border: 5px solid #147675;
+            color: white;
+
+            h4 {
+                margin: 0;
+                padding: 10px;
+                font-size: 16px;
+            }
+            p {
+                margin: 0;
+                padding: 0 10px;
+                line-height: 20px;
+                font-size: 14px;
             }
         }
     }
@@ -246,15 +275,6 @@ body {
         background: #182746;
         border: 5px solid #147675;
         cursor: pointer;
-    }
-    .item h4 {
-        margin: 0;
-        padding: 10px;
-    }
-    .item p {
-        margin: 0;
-        padding: 0 10px;
-        line-height: 20px;
     }
     .item0 {
         transform: rotateY(-60deg) translateZ(300px);
@@ -639,7 +659,7 @@ $pulsateBigSize: 14px;
     text-align: center;
     .item {
         height: 40%;
-        width: 27%;
+        width: 26%;
         margin: 2% 2% 1%;
         display: inline-block;
         position: relative;

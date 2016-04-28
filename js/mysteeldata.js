@@ -22,9 +22,17 @@
                 slideShadows : true
             }
         };
-        new Swiper('#stage_area1', page1Options);
-        new Swiper('#stage_area2', page1Options);
-        new Swiper('#stage_area3', page1Options);
+        var page1Swipers = {
+            's1': new Swiper('#stage_area1', page1Options),
+            's2': new Swiper('#stage_area2', page1Options),
+            's3': new Swiper('#stage_area3', page1Options)
+        };
+        $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
+            var $this = $(this);
+            var swiperObjIndex = $this.attr('data-index');
+            var index = $this.index();
+            page1Swipers['s' + swiperObjIndex].slideTo(index, 350, false);
+        });
 
         var swiper = new Swiper('.whfull', {
             pagination: '.swiper-pagination',

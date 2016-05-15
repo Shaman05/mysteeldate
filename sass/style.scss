@@ -26,9 +26,9 @@ body {
     width: 100%;
     height: 120px;
     font-family: 'Microsoft YaHei';
-    // background: #466987;
+    background: #211E3C;
     //background: url('../img/top_bg.png') no-repeat center top;
-    @include bgcolor-alpha($bgcolor: rgba(24, 46, 77, 0.3));
+   // @include bgcolor-alpha($bgcolor: rgba(24, 46, 77, 0.3));
     .tn-header {
         width: 100%;
         height: 120px;
@@ -90,7 +90,7 @@ body {
 .tit-warning {
     height: 118px;
     text-align: center;
-    @include font-fsc1($f-sty: $fontYaHei, $fs: 2.6em, $fc: #6D6879, $f-lh: 118px);
+    @include font-fsc1($f-sty: $fontYaHei, $fs: 2.6em, $fc: #fff, $f-lh: 118px);
 }
 
 .section-bottom-txt {
@@ -98,8 +98,9 @@ body {
     left: 0;
     bottom: 5%;
     padding: 15px 5%;
-    @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #fff, $f-lh: 220%);
+    @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #141D43, $f-lh: 220%);
     @include bgcolor-alpha($bgcolor: rgba(255, 255, 255, 0.3));
+    color:#141D43 !important;
 }
 
 .section {
@@ -118,6 +119,17 @@ body {
         -khtml-opacity: 0.5;
         opacity: 0.5;
     }
+    .next-ico{
+      position:absolute;
+      bottom:20px;
+      left: 50%;
+      display: inline-block;
+      width: 46px;
+      height: 35px;
+      margin-left: -23px;
+      cursor:pointer; 
+      background:url(../img/next.png) no-repeat center center;
+    }
 }
 
 #mainQuote {
@@ -130,8 +142,9 @@ body {
 }
 
 #section0 {
-    background-image: url(../img/s0_bg.png);
-    background-repeat: no-repeat;
+    //background-image: url(../img/s0_bg.png);
+    //background-repeat: no-repeat;
+    background: #211E3C;
     #bg {
         position: relative;
         width: 100%;
@@ -322,9 +335,21 @@ body {
         opacity: 1;
     }
 }
+.square-bg{
+   position:relative;
+   margin:0;
+   height:90%;
+   width: 96%;
+   left:43%;
+   top: 5%;
+   margin-left: -41.3%;
+   @include border-radius(8px);
+   background: url(../img/damand_bg.png) center center #5ABBBF;
+}
 
 #section1 {
-    background: url(../img/damand_bg.png) center center #0A2F41;
+   // background: url(../img/damand_bg.png) center center #0A2F41;
+   background:#211E3C;
     h1 {
         background: url(../img/tit-glsj.png) center center;
     }
@@ -336,21 +361,22 @@ body {
         top: 0;
         right: 0;
         bottom: 0;
-        width: 360px;
-        height: 256px;
-        background: url(../img/s1_logo@2.png);
+        width: 25%;
+        height: 30%;
+        background: url(../img/s1_logo@2.png) no-repeat center center;
+        background-size:contain;
     }
     .s1-img {
         display: inline-block;
         position: absolute;
-        margin: auto 0 auto 5%;
+        margin: auto 0 auto 3%;
         left: 50%;
         top: 0;
         right: 0;
         bottom: 0;
-        padding:10px 0 0 10px;
-        width: 500px;
-        height: 360px;
+        padding:5% 0 0 10px;
+        width: 40%;
+        height: 80%;
         overflow: hidden;
         //background: url(../img/s1_img@2.png);
         li {
@@ -358,8 +384,8 @@ body {
             z-index: 1;
             float: left;
             margin: 0 10px 6% 10px;
-            width: 100px;
-            height: 100px;
+            width: 18%;
+            height: 18%;
             @include border-radius(5px);
             @include box-sizing;
             text-transform:none;
@@ -478,7 +504,10 @@ body {
 }
 
 #section2 {
-    background: url(../img/damand_bg.png) center center #444081;
+    background:#141D43;
+    .square-bg{
+        background: url(../img/damand_bg.png) center center #5480C7;
+    }
     h1 {
         background: url(../img/tit-tsyj.png) center center;
     }
@@ -491,6 +520,7 @@ body {
         width: 25%;
         height: 70%;
         padding: 20px;
+        overflow-y: auto;
         color: #fff;
         transform: translate(0, -50%);
         border: 1px solid #929DD6;
@@ -577,7 +607,10 @@ body {
 }
 
 #section3 {
-    background: url(../img/damand_bg.png) center center #28233B;
+    background:#211E3C;
+    .square-bg{
+        background: url(../img/damand_bg.png) center center #74B35B;
+    }
     h1 {
         background: url(../img/tit-yjzt.png) center center;
     }
@@ -644,10 +677,7 @@ body {
     }
 }
 
-$animateBorderColor: rgba(25,
-30,
-28,
-0.5);
+$animateBorderColor: rgba(190,228,255,0.5);
 $pulsateSize: 12px;
 $pulsateBigSize: 14px;
 .contain-zt-list {
@@ -666,7 +696,7 @@ $pulsateBigSize: 14px;
         background: url(../img/s3_img.png) no-repeat center center;
         background-size: 100%;
         color: #ffffff;
-        border: $pulsateSize solid rgba(25, 30, 28, 1);
+        border: $pulsateSize solid rgba(167, 195, 151, 1);
         .item-inner {
             position: absolute;
             top: 0;
@@ -753,7 +783,10 @@ $pulsateBigSize: 14px;
 }
 
 #section4 {
-    background: url(../img/damand_bg.png) center center #502373;
+    background:#211E3C;
+    .square-bg{
+        background: url(../img/damand_bg.png) center center #309ABB;
+    }
     h1 {
         background: url(../img/tit-ljtj.png) center center;
     }
@@ -777,7 +810,7 @@ $pulsateBigSize: 14px;
             @include font-fsc1($f-sty: $fontYaHei, $fs: 24px, $fc: #fff, $f-lh: 68px);
             cursor: pointer;
             &.active {
-                color: #4B2073;
+                color: #2DADD5;
                 background: #fff;
             }
         }
@@ -793,12 +826,12 @@ $pulsateBigSize: 14px;
         li {
             position: relative;
             margin: 2% 1%;
-            padding: 2%;
+            padding: 1%;
             display: inline-block;
             height: 40%;
             width: 26%;
-            border: 1px solid #876093;
-            @include bgcolor-alpha($bgcolor: rgba(87, 42, 79, 0.4));
+            border: 1px solid #349CBC;
+            @include bgcolor-alpha($bgcolor: rgba(248, 246,249, 0.4));
             .box {
                 display: inline-block;
                 height: 100%;
@@ -840,7 +873,7 @@ $pulsateBigSize: 14px;
                     @extend h4;
                     opacity: 0;
                     bottom: -160%;
-                    color: #000;
+                    color: #fff;
                     webkit-transition: opacity 1.2s ease;
                     -moz-transition: opacity 1.2s ease;
                     -o-transition: opacity 1.2s ease;
@@ -908,10 +941,36 @@ $pulsateBigSize: 14px;
         top: 10%;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 220px;
-        height: 150px;
-        background: url(../img/s1_logo@2.png);
-        background-size: 100% 100%;
+        width: 30%;
+        height: 20%;
+        background: url(../img/s1_logo@2.png) no-repeat center center;
+        background-size: contain;
+    }
+    .weixin-img{
+        position:absolute;
+        top: 50%;
+        left: 20%;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        text-align: center;
+        background:#fff;
+        img{
+            padding:10px 0 0;
+        }
+         @include border-radius(3px);
+    }
+    .txt-contact{
+        position:absolute;
+        top: 45%;
+        left: 40%;
+        @include font-fsc1($f-sty: $fontYaHei, $fs: 22px, $fc: #fff, $f-lh: 220%);
+        h2{
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight:normal;
+        }
+
     }
 }
 

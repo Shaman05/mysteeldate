@@ -46,7 +46,9 @@
             effect: 'flip',
             grabCursor: true,
             onClick: function (swiper){
+                // window.location.href = "http://www.baidu.com";
                 alert('你点了Swiper;');
+
             }
 
         });
@@ -74,6 +76,14 @@
             effect: 'flip',
             grabCursor: true
 
+        });
+
+        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img").mouseover(function(){
+          swiper.lockSwipes();
+        });
+
+        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img").mouseout(function(){
+          swiper.unlockSwipes();
         });
 
         // $('#fullpage').fullpage({

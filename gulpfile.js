@@ -26,6 +26,12 @@ gulp.task('concat-master', function(){
   .pipe(gulp.dest('.build'));
 });
 
+gulp.task('concat-master', function(){
+  return gulp.src(['js/master.min.js', 'js/d.js', 'js/mysteeldata2d.js'])
+  .pipe(concat('master2d.min.js'))
+  .pipe(gulp.dest('.build'));
+});
+
 gulp.task('uglify', ['concat-lib', 'concat-cdn', 'concat-master'], function(){
   return gulp.src('.build/*.js')
     .pipe(uglify({

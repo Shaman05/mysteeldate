@@ -97,7 +97,7 @@
         //   navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
         // });
 
-        var $rotateContain = $('.  ');
+        var $rotateContain = $('.container');
         setTimeout(function (){
             $rotateContain.eq(0).addClass('cur');
         }, 2000);

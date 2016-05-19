@@ -4,6 +4,17 @@
             top: 320px;
             left: 230px;
         }
+        .stage_area {
+            height: 760px;
+            width: 800px;
+            right: 50px;
+            bottom: -60px;
+            padding: 0 50px;
+            .swiper-container{
+                left: 50px;
+                right: 50px;
+            }
+        }
     }
 }
 
@@ -17,13 +28,11 @@
             font-size: 20px;
             line-height: 26px;
         }
-    }
-    #section0 {
         .stage_area {
-            height: 400px;
+            height: 600px;
             width: 600px;
             right: 50px;
-            bottom: 50px;
+            bottom: -50px;
             padding: 0 50px;
             .swiper-container{
                 left: 50px;

@@ -8,6 +8,7 @@
 
     $(function (){
 
+        var $slideBoard = $('#slideBoard');
         var page1Options = {
             effect: 'coverflow',
             initialSlide: 1,
@@ -27,6 +28,7 @@
             's2': new Swiper('#stage_area2', page1Options),
             's3': new Swiper('#stage_area3', page1Options)
         };
+        $slideBoard.css('opacity', '1');
         $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
             var $this = $(this);
             var swiperObjIndex = $this.attr('data-index');
@@ -95,7 +97,7 @@
         //   navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
         // });
 
-        var $rotateContain = $('.container');
+        var $rotateContain = $('.  ');
         setTimeout(function (){
             $rotateContain.eq(0).addClass('cur');
         }, 2000);

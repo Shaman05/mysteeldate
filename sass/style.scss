@@ -21,7 +21,7 @@ body {
 }
 
 .top-nav {
-    position: fixed;
+    //position: fixed;
     z-index: 9;
     width: 100%;
     height: 120px;
@@ -245,6 +245,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         width: 100%;
         bottom: 0
     }
+    .stage_area-2d{
+             position: absolute;
+             width: 35%;
+             height: 50%;
+             margin:auto;
+             top:0;
+             bottom:0;
+             right:10%;
+             opacity: 0;
+             transition: all 1s;
+             overflow: hidden;
+             background: rgba(0, 0, 0, 0.2);
+             .swiper-container{
+                    position:absolute;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.5s;
+                    .swiper-wrapper{
+                        //padding:20px;
+                        .swiper-slide{
+
+                            h4 {
+                                 padding:20px 20px 0;
+                                 font-weight: normal;
+                                 @include font-fsc1($f-sty: $fontYaHei, $fs: 22px, $fc: #7786C9, $f-lh:170%);
+                            }
+                            p {
+                                padding:20px 20px;
+                                @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #A7A6AB, $f-lh:200%);
+                            }
+                        }
+                        
+                    }
+                }
+                .swiper-container.cur{
+                    opacity: 1;
+                    visibility: visible;
+                }
+     }
+    
     .stage_area {
         height: 800px;
         width: 900px;
@@ -275,19 +317,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
             visibility: visible;
         }
         .swiper-slide{
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.2);
             border: 1px solid #34dbff;
             color: white;
             h4 {
                 margin: 0;
-                padding: 10px;
-                font-size: 16px;
+                padding: 15px;
+                //font-weight: normal;
+                 @include font-fsc1($f-sty: $fontYaHei, $fs: 22px, $fc: #fff, $f-lh:170%);
             }
             p {
                 margin: 0;
-                padding: 0 10px;
-                line-height: 20px;
-                font-size: 14px;
+                padding: 0 15px;
+                @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #fff, $f-lh:200%);
             }
         }
     }
@@ -551,11 +593,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         width: 25%;
         height: 70%;
         padding: 20px;
-        overflow-y: auto;
+        z-index: 9;
         color: #fff;
         transform: translate(0, -50%);
         border: 1px solid #929DD6;
         @include bgcolor-alpha($bgcolor: rgba(255, 255, 255, 0.3));
+        .scroll-box{
+            height: 100%;
+             overflow-y: auto;
+        }
         h2 {
             margin-bottom: 1em;
             @include font-fsc1($f-sty: $fontYaHei, $fs: 1.8em, $fc: #fff, $f-lh: 220%);
@@ -606,10 +652,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     }
     .stage_layer {
         position: absolute;
-        height: 580px;
-        width: 640px;
+        width: 540px;
+        height: 460px;
         left: 13%;
-        top: 15%;
+        top: 18%;
         perspective: 1800px;
         -ms-perspective: 1800px;
     }
@@ -654,14 +700,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
             }
 
             .item0 {
-                transform: translateX(50px) translateZ(150px);
-                -ms-transform: translateX(50px) translateZ(150px);
+                transform: translateX(50px) translateZ(100px);
+                -ms-transform: translateX(50px) translateZ(100px);
                 background: url(../img/s2_img1.png) center center;
                 background-size: 100% 100%;
             }
             .item0.cur {
-                transform: scale(1.2) translateX(50px) translateZ(150px);
-                -ms-transform: scale(1.2) translateX(50px) translateZ(150px);
+                transform: scale(1.2) translateX(50px) translateZ(100px);
+                -ms-transform: scale(1.2) translateX(50px) translateZ(100px);
             }
 
             .item1 {
@@ -677,12 +723,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
 
             .item2 {
                 background: red;
-                transform: translateX(-50px) translateZ(-150px);
-                -ms-transform: translateX(-50px) translateZ(-150px);
+                transform: translateX(-50px) translateZ(-100px);
+                -ms-transform: translateX(-50px) translateZ(-100px);
             }
             .item2.cur {
-                transform: scale(1.2) translateX(-50px) translateZ(-150px);
-                -ms-transform: scale(1.2) translateX(-50px) translateZ(-150px);
+                transform: scale(1.2) translateX(-50px) translateZ(-100px);
+                -ms-transform: scale(1.2) translateX(-50px) translateZ(-100px);
             }
         }
     }
@@ -946,10 +992,10 @@ $pulsateBigSize: 14px;
                     right: 0;
                     bottom: 0;
                     width: 100%;
-                    height: 60px;
+                    height: 40px;
                     font-weight: normal;
                     letter-spacing: 4px;
-                    @include font-fsc1($f-sty: $fontYaHei, $fs: 30px, $fc: #fff, $f-lh: 60px);
+                    @include font-fsc1($f-sty: $fontYaHei, $fs: 26px, $fc: #fff, $f-lh:40px);
                     webkit-transition: opacity 0.6s ease;
                     -moz-transition: opacity 0.6s ease;
                     -o-transition: opacity 0.6s ease;
@@ -958,7 +1004,7 @@ $pulsateBigSize: 14px;
                 h3 {
                     @extend h4;
                     opacity: 0;
-                    bottom: -160%;
+                    bottom: -140%;
                     color: #fff;
                     webkit-transition: opacity 1.2s ease;
                     -moz-transition: opacity 1.2s ease;
@@ -972,7 +1018,7 @@ $pulsateBigSize: 14px;
                     bottom: -70%;
                     opacity: 0;
                     text-align: left;
-                    @include font-fsc1($f-sty: $fontYaHei, $fs: 18px, $fc: #fff, $f-lh: 200%);
+                    @include font-fsc1($f-sty: $fontYaHei, $fs: 18px, $fc: #fff, $f-lh: 160%);
                     webkit-transition: opacity 1.2s ease;
                     -moz-transition: opacity 1.2s ease;
                     -o-transition: opacity 1.2s ease;

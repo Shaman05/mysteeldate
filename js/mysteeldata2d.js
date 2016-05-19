@@ -7,26 +7,16 @@
     "use strict";
 
     $(function (){
-
+        var $slideBoard = $('#slideBoard');
         var page1Options = {
-            effect: 'coverflow',
-            initialSlide: 1,
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflow: {
-                rotate: 30,
-                stretch: 10,
-                depth: 100,
-                modifier: 2,
-                slideShadows : true
-            }
+            pagination: '.swiper-pagination'
         };
         var page1Swipers = {
             's1': new Swiper('#stage_area1', page1Options),
             's2': new Swiper('#stage_area2', page1Options),
             's3': new Swiper('#stage_area3', page1Options)
         };
+         $slideBoard.css('opacity', '1');
         $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
             var $this = $(this);
             var swiperObjIndex = $this.attr('data-index');

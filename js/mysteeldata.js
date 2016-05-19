@@ -44,6 +44,10 @@
             direction: 'vertical'
         });
 
+        $('.next-ico').click(function(){
+            swiper.slideNext();
+        })
+
         var swiperflip1 = new Swiper('#swiper-effect1', {
             effect: 'flip',
             grabCursor: true,

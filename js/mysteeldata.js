@@ -112,14 +112,11 @@
         });
 
         var $board = $('#section2').find('.board');
-        var $item = $('#s2_contain').find('.item');
+        var $item = $('.three_contain').find('.three_item');
         $item.hover(function (){
             var $this = $(this);
-            var index = $this.index();
+            var index = $board.size() - 1 -$this.index();
             $board.removeClass('cur').eq(index).addClass('cur');
-            $this.addClass('cur');
-        }, function (){
-            $(this).removeClass('cur');
         });
 
         var $section4 = $('#section4');

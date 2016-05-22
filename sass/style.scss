@@ -20,6 +20,87 @@ body {
     height: 100%;
 }
 
+.three_stage_layer{
+    position: absolute;
+    width: 540px;
+    height: 460px;
+    left: 13%;
+    top: 30%;
+    perspective: 1800px;
+    -ms-perspective: 1800px;
+}
+.three_contain{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    -ms-transform-style: none;
+    transition: all 1s;
+    -ms-transition: all 1s;
+}
+.swiper-slide-active{
+    transform: rotateX(60deg) rotateZ(30deg);
+    -ms-transform: none;
+}
+.three_item{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    opacity: 0.8;
+    transform: scale(1);
+    -ms-transform: none;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+}
+.three_item:hover{
+    opacity: 1;
+}
+.three_item0{
+    background: red;
+    transform: translateZ(-80px);
+
+}
+.swiper-slide-active .three_item0{
+    -ms-transform: rotateX(60deg) rotateZ(30deg) translateZ(-80px);
+}
+.three_item0:hover{
+    transform: scale(1.1) translateZ(-80px);
+    -ms-transform: scale(1.1) rotateX(60deg) rotateZ(30deg) translateZ(-80px);
+}
+
+.three_item1{
+    background: yellow;
+    transform: translateZ(0);
+    background: url(../img/s2_img1.png) center center;
+    background-size: contain;
+}
+.swiper-slide-active .three_item1{
+    -ms-transform: rotateX(60deg) rotateZ(30deg) translateZ(0);
+}
+.three_item1:hover{
+    transform: scale(1.1);
+    -ms-transform: scale(1.1) rotateX(60deg) rotateZ(30deg) translateZ(0);
+}
+
+.three_item2{
+    background: blue;
+    transform: translateZ(80px);
+    background: url(../img/s2_img2.png) center center;
+    background-size: contain;
+}
+.swiper-slide-active .three_item2{
+    -ms-transform: rotateX(60deg) rotateZ(30deg) translateZ(80px);
+}
+.three_item2:hover{
+    transform: scale(1.1) translateZ(80px);
+    -ms-transform: scale(1.1) rotateX(60deg) rotateZ(30deg) translateZ(80px);
+}
+
 .top-nav {
     //position: fixed;
     z-index: 9;
@@ -93,7 +174,12 @@ body {
     position: absolute;
     overflow: hidden;
     width: 100%;
-    height: 100%
+    height: 100%;
+    transition: all 0.2s;
+    opacity: 0;
+}
+.swiper-slide-active #canvasPIXI{
+    opacity: 1;
 }
 
 .whfull {

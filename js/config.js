@@ -12,8 +12,8 @@
     //资源加载的基础路径
     this.base_url = './';
 
-    //是否开启背景音乐
-    this.enableMusic = false;
+    //是否开启背景音乐, IE下需放置同文件名的mp3
+    this.musicOn = false;
     this.soundFile = '/assets/music.ogg';
 
     //canvas配置

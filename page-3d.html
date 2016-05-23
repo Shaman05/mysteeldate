@@ -9,128 +9,138 @@
 </head>
 
 <body>
-    <div class="swiper-container whfull">
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-wrapper">
-            <div class="swiper-slide section" id="section0">
+<div class="swiper-container whfull">
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide section" id="section0">
             <div class="line-color"></div>
-                <div class="top-nav">
-                    <div class="tn-header">
-                        <div class="tn-logo">
-                            <a href="http://www.eastmoney.com/" target="_blank"><span></span></a>
-                        </div>
-                        <ul class="tn-main">
-                            <li class="active"><a href="#" target="_blank">首页</a></li>
-                            <li><a href="#" target="_blank">数据</a></li>
-                            <li><a href="javascript:void(0);">特色研究 <i></i></a></li>
-                            <li><a href="javascript:void(0);">研究专题 <i></i></a></li>
-                            <li><a href="javascript:void(0);">逻辑图集 <i></i></a></li>
-                            <li><a href="#" target="_blank">研究报告</a></li>
-                            <li><a href="#" target="_blank">联系我们</a></li>
-                            <li class="regist"><a href="#" target="_blank">登陆/注册</a></li>
-                        </ul>
+            <div class="top-nav">
+                <div class="tn-header">
+                    <div class="tn-logo">
+                        <a href="http://www.eastmoney.com/" target="_blank"><span></span></a>
                     </div>
+                    <ul class="tn-main">
+                        <li class="active"><a href="#" target="_blank">首页</a></li>
+                        <li><a href="#" target="_blank">数据</a></li>
+                        <li><a href="javascript:void(0);">特色研究 <i></i></a></li>
+                        <li><a href="javascript:void(0);">研究专题 <i></i></a></li>
+                        <li><a href="javascript:void(0);">逻辑图集 <i></i></a></li>
+                        <li><a href="#" target="_blank">研究报告</a></li>
+                        <li><a href="#" target="_blank">联系我们</a></li>
+                        <li class="regist"><a href="#" target="_blank">登陆/注册</a></li>
+                    </ul>
                 </div>
-                <div id="bg">
-                    <div id="grid"></div>
-                </div>
-                <div id="canvasPIXI"></div>
-                <div id="mainQuoteAll">
-                    <div id="mainQuoteHidden">
-                        <div id="mainQuote">
-                            MY STEEL DATA
-                            <br>
-                            <br>钢铁数据：我们是很棒的软件
-                        </div>
-                    </div>
-                    <div id="secondQuote">welcome to my steel data</div>
-                    <div id="lineQuote1" class="lineQuote"></div>
-                    <div id="lineQuote2" class="lineQuote"></div>
-                    <div id="lineQuote3" class="lineQuote"></div>
-                </div>
-                <div class="stage_area" id="slideBoard">
-                    <div class="swiper-container cur" id="stage_area1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" data-index="1">
-                                <h4>热门数据01</h4>
-                                <p>热门数据热门数据热门数据热门数据热门数据热门数据热门数据</p>
-                            </div>
-                            <div class="swiper-slide" data-index="1">
-                                <h4>热门数据02</h4>
-                                <p>热门数据热门数据热门数据热门数据热门数热门数据热门数据热门数据热门数据热门数据热门数据热门数据据热门数据热门数据</p>
-                            </div>
-                            <div class="swiper-slide" data-index="1">
-                                <h4>热门数据03</h4>
-                                <p>热门数据热门数据热门数据热门数据热门数据热门数据热门热门数据热门数据热门数据热门数据热门数据热门数据热门数据数据</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-container" id="stage_area2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" data-index="2">
-                                <h4>最新数据11</h4>
-                                <p>最新数据最新数据最新数据最新数据</p>
-                            </div>
-                            <div class="swiper-slide" data-index="2">
-                                <h4>最新数据22</h4>
-                                <p>最新数据最新数据最新数据最新数据最新数据最新数据最新数据最新数据</p>
-                            </div>
-                            <div class="swiper-slide" data-index="2">
-                                <h4>最新数据33</h4>
-                                <p>最新数据最新数据最新数据最新数据最新数据最新数据最新数据最新数据</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-container" id="stage_area3">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" data-index="3">
-                                <h4>最新数据预测11</h4>
-                                <p>最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测</p>
-                            </div>
-                            <div class="swiper-slide" data-index="3">
-                                <h4>最新数据预测22</h4>
-                                <p>最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测</p>
-                            </div>
-                            <div class="swiper-slide" data-index="3">
-                                <h4>最新数据预测33</h4>
-                                <p>最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="content" style="display:none">
-                    <script>
-                    var selectedTemplate = "homePageTMP";
-                    </script>
-                </div>
-                <div id="infoDescription">
-                    <div id="infoDsc">
-                        <div id="infoFull">
-                            <div class="closeBtn">
-                                <div class="closeBtnIns"></div>
-                            </div>
-                            <div id="headerInfo"></div>
-                            <div id="scrollProd">
-                                <div id="scrollCont">
-                                    <div id="infoIntro"></div>
-                                    <div id="mainDescInfo"></div>
-                                    <br class="clear" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="sndBtn">
-                    <div id="soundIconOn"></div>
-                    <div id="soundIconOff"></div>
-                </div>
-                <div class="next-ico"></div>
             </div>
-            <div class="swiper-slide section" id="section1">
-                <div class="square-bg">
+            <div id="bg">
+                <div id="grid"></div>
+            </div>
+            <div id="canvasPIXI"></div>
+            <div id="mainQuoteAll">
+                <div id="mainQuoteHidden">
+                    <div id="mainQuote">
+                        MY STEEL DATA
+                        <br>
+                        <br>钢铁数据：我们是很棒的软件
+                    </div>
+                </div>
+                <div id="secondQuote">welcome to my steel data</div>
+                <div id="lineQuote1" class="lineQuote"></div>
+                <div id="lineQuote2" class="lineQuote"></div>
+                <div id="lineQuote3" class="lineQuote"></div>
+            </div>
+            <div class="stage_area" id="slideBoard">
+                <div class="swiper-container cur" id="stage_area1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-index="1">
+                            <h4>热门数据01</h4>
+
+                            <p>热门数据热门数据热门数据热门数据热门数据热门数据热门数据</p>
+                        </div>
+                        <div class="swiper-slide" data-index="1">
+                            <h4>热门数据02</h4>
+
+                            <p>热门数据热门数据热门数据热门数据热门数热门数据热门数据热门数据热门数据热门数据热门数据热门数据据热门数据热门数据</p>
+                        </div>
+                        <div class="swiper-slide" data-index="1">
+                            <h4>热门数据03</h4>
+
+                            <p>热门数据热门数据热门数据热门数据热门数据热门数据热门热门数据热门数据热门数据热门数据热门数据热门数据热门数据数据</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container" id="stage_area2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-index="2">
+                            <h4>最新数据11</h4>
+
+                            <p>最新数据最新数据最新数据最新数据</p>
+                        </div>
+                        <div class="swiper-slide" data-index="2">
+                            <h4>最新数据22</h4>
+
+                            <p>最新数据最新数据最新数据最新数据最新数据最新数据最新数据最新数据</p>
+                        </div>
+                        <div class="swiper-slide" data-index="2">
+                            <h4>最新数据33</h4>
+
+                            <p>最新数据最新数据最新数据最新数据最新数据最新数据最新数据最新数据</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container" id="stage_area3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-index="3">
+                            <h4>最新数据预测11</h4>
+
+                            <p>最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测</p>
+                        </div>
+                        <div class="swiper-slide" data-index="3">
+                            <h4>最新数据预测22</h4>
+
+                            <p>最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测</p>
+                        </div>
+                        <div class="swiper-slide" data-index="3">
+                            <h4>最新数据预测33</h4>
+
+                            <p>最新数据预测最新数据预测最新数据预测最新数据预测最新数据预测</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content" style="display:none">
+                <script>
+                    var selectedTemplate = "homePageTMP";
+                </script>
+            </div>
+            <div id="infoDescription">
+                <div id="infoDsc">
+                    <div id="infoFull">
+                        <div class="closeBtn">
+                            <div class="closeBtnIns"></div>
+                        </div>
+                        <div id="headerInfo"></div>
+                        <div id="scrollProd">
+                            <div id="scrollCont">
+                                <div id="infoIntro"></div>
+                                <div id="mainDescInfo"></div>
+                                <br class="clear"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sndBtn">
+                <div id="soundIconOn"></div>
+                <div id="soundIconOff"></div>
+            </div>
+            <div class="next-ico"></div>
+        </div>
+        <div class="swiper-slide section" id="section1">
+            <div class="square-bg">
                 <div class="section-tit"></div>
                 <h1></h1>
+
                 <div class="s1-log"></div>
                 <ul class="s1-img">
                     <li class="inverted"></li>
@@ -145,89 +155,123 @@
                     <li></li>
                     <li></li>
                 </ul>
-                <div class="section-bottom-txt">钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很 棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据 我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.
+                <div class="section-bottom-txt">钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很
+                    棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据
+                    我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.
                 </div>
-               </div> 
             </div>
-            <div class="swiper-slide section" id="section2">
-              <div class="square-bg">
+        </div>
+        <div class="swiper-slide section" id="section2">
+            <div class="square-bg">
                 <div class="section-tit"></div>
                 <h1></h1>
-                <div class="board cur"><div class="scroll-box">
-                    <h2>商品研究111</h2>
-                    <p>钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很 棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据 我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件
-                    </p> </div>
-                </div>
-                <div class="board"><div class="scroll-box">
-                    <h2>商品研究222</h2>
-                     <p>钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很 棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据 我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件
-                    </p> </div>
+
+                <div class="board cur">
+                    <div class="scroll-box">
+                        <h2>商品研究111</h2>
+
+                        <p>钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很
+                            棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据
+                            我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件
+                        </p></div>
                 </div>
                 <div class="board">
-                   <div class="scroll-box">
-                    <h2>商品研究333</h2>
-                    <p>钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很 棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据 我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件
-                    </p>
+                    <div class="scroll-box">
+                        <h2>商品研究222</h2>
+
+                        <p>钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很
+                            棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据
+                            我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件
+                        </p></div>
+                </div>
+                <div class="board">
+                    <div class="scroll-box">
+                        <h2>商品研究333</h2>
+
+                        <p>钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很
+                            棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据
+                            我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件
+                        </p>
                     </div>
                 </div>
-                  <div class="three_stage_layer">
-                      <div class="three_contain" id="three_contain">
-                          <div class="three_item three_item0"></div>
-                          <div class="three_item three_item1"></div>
-                          <div class="three_item three_item2"></div>
-                      </div>
-                  </div>
-              </div>
+                <div class="common_stage three_stage_layer" id="notEdgeShow">
+                    <div class="three_contain" id="three_contain">
+                        <div class="three_item three_item0"></div>
+                        <div class="three_item three_item1"></div>
+                        <div class="three_item three_item2"></div>
+                    </div>
+                </div>
+                <div class="common_stage ms-wrapper ms-effect-1" id="edgeShow">
+                    <div class="ms-perspective">
+                        <div class="ms-device">
+                            <!-- /ms-object -->
+                            <div class="ms-screens">
+                                <a class="ms-screen-1"></a>
+                                <a class="ms-screen-2"></a>
+                                <a class="ms-screen-3"></a>
+                            </div>
+                        </div><!-- /ms-device -->
+                    </div><!-- /ms-perspective -->
+                </div>
             </div>
-            <div class="swiper-slide section" id="section3">
-               <div class="square-bg">
+        </div>
+        <div class="swiper-slide section" id="section3">
+            <div class="square-bg">
                 <div class="section-tit"></div>
                 <h1></h1>
+
                 <div class="tit-warning">暂未开放，敬请期待！</div>
                 <div class="contain-zt-list">
                     <div class="item">
                         <div class="item-inner">
                             <h4>钢铁上市公司</h4>
+
                             <p>3行控制字数司钢铁上市公司钢铁上市公司钢铁司钢
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-inner">
                             <h4>钢铁上市公司</h4>
+
                             <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-inner">
                             <h4>钢铁上市公司</h4>
+
                             <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-inner">
                             <h4>钢铁上市公司</h4>
+
                             <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-inner">
                             <h4>钢铁上市公司</h4>
+
                             <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-inner">
                             <h4>钢铁上市公司</h4>
+
                             <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                         </div>
                     </div>
                 </div>
-               </div>
             </div>
-            <div class="swiper-slide section" id="section4">
-              <div class="square-bg">
+        </div>
+        <div class="swiper-slide section" id="section4">
+            <div class="square-bg">
                 <div class="section-tit"></div>
                 <h1></h1>
+
                 <div class="tit-warning">暂未开放，敬请期待！</div>
                 <div class="logic-switch">
                     <div class="logic-switch-btn active">钢铁逻辑图集</div>
@@ -240,32 +284,44 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider1</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁逻辑图集1钢铁上市公司钢铁上市公司钢铁上控制两行</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s2_img1.png)">
                                         <h4>钢铁逻辑图集slider2</h4>
+
                                         <h3>钢铁逻辑图集2</h3>
+
                                         <p>钢铁上市公司钢铁222上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider3</h4>
+
                                         <h3>钢铁逻辑图集3</h3>
+
                                         <p>钢铁上市公司钢3333铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider4</h4>
+
                                         <h3>钢铁逻辑图集4</h3>
+
                                         <p>钢铁上市公司4钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider5</h4>
+
                                         <h3>钢铁逻辑图集5</h3>
+
                                         <p>钢铁上市公司钢铁5上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider6</h4>
+
                                         <h3>钢铁逻辑图集6</h3>
+
                                         <p>钢铁上市公司钢6铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                 </div>
@@ -278,32 +334,44 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider1</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s2_img1.png)">
                                         <h4>钢铁逻辑图集slider2</h4>
+
                                         <h3>钢铁逻辑图集2</h3>
+
                                         <p>钢铁上市公司钢铁上市222司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider3</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider4</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider5</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider6</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                 </div>
@@ -316,32 +384,44 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider1</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s2_img1.png)">
                                         <h4>钢铁逻辑图集slider2</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider3</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider4</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider5</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider6</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                 </div>
@@ -356,32 +436,44 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>effect4钢铁逻辑图集slider1</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s2_img1.png)">
                                         <h4>钢铁逻辑图集slider2</h4>
+
                                         <h3>钢铁逻辑图集2</h3>
+
                                         <p>钢铁上市公司钢铁222上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider3</h4>
+
                                         <h3>钢铁逻辑图集3</h3>
+
                                         <p>钢铁上市公司钢3333铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider4</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider5</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider6</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                 </div>
@@ -394,32 +486,44 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider1</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s2_img1.png)">
                                         <h4>钢铁逻辑图集slider2</h4>
+
                                         <h3>钢铁逻辑图集2</h3>
+
                                         <p>钢铁上市公司钢铁上市222司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider3</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider4</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider5</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider6</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                 </div>
@@ -432,32 +536,44 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider1</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s2_img1.png)">
                                         <h4>钢铁逻辑图集slider2</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider3</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider4</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider5</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                     <div class="swiper-slide" style="background-image:url(img/s3_img.png)">
                                         <h4>钢铁逻辑图集slider6</h4>
+
                                         <h3>钢铁逻辑图集1</h3>
+
                                         <p>钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司钢铁上市公司</p>
                                     </div>
                                 </div>
@@ -465,30 +581,35 @@
                         </div>
                     </li>
                 </ul>
-                <div class="section-bottom-txt">钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很 棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据 我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide section" id="section5">
-                <div class="s5-top"></div>
-                <div class="s5-logo"></div>
-                <div class="weixin-img">
-                   <img src="img/weixin-img.png" border="0">
-                </div>
-                <div class="txt-contact">
-                  <h2>联系我们</h2>
-                  上海钢联电子商务股份有限公司<br>
-                  电话：<br>
-                  传真：<br>
-                  地址：<br>
-
+                <div class="section-bottom-txt">钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据我们是很
+                    棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.钢联数据我们是很棒的软件，钢联数据我们是很的软件，钢联数据我们是很棒的软件，钢联数据
+                    我们是很棒的软件，钢联数据我们是很棒的软件，钢联数据我们是很棒的软件.
                 </div>
             </div>
         </div>
+        <div class="swiper-slide section" id="section5">
+            <div class="s5-top"></div>
+            <div class="s5-logo"></div>
+            <div class="weixin-img">
+                <img src="img/weixin-img.png" border="0">
+            </div>
+            <div class="txt-contact">
+                <h2>联系我们</h2>
+                上海钢联电子商务股份有限公司<br>
+                电话：<br>
+                传真：<br>
+                地址：<br>
+
+            </div>
+        </div>
     </div>
+</div>
 </body>
 <script type="text/javascript" src="js/config.js"></script>
 <script type="text/javascript" src="dist/cdn.min.js"></script>
 <script type="text/javascript" src="dist/libs.min.js"></script>
-<script type="text/javascript" src="dist/master.min.js"></script>
+<script type="text/javascript" src="js/master.min.js"></script>
+<script type="text/javascript" src="js/d.js"></script>
+<script type="text/javascript" src="js/mysteeldata.js"></script>
+
 </html>

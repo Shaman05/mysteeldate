@@ -156,26 +156,14 @@ body {
 .ms-effect-1 .ms-screens .ms-screen-1 {
     background: url(../img/s2_img2.png) center center;
     background-size: contain;
-    transform: scale(1);
 }
 .ms-effect-1 .ms-screens .ms-screen-2 {
     background: url(../img/s2_img2.png) center center;
     background-size: contain;
-    transform: scale(1);
 }
 .ms-effect-1 .ms-screens .ms-screen-3 {
     background: url(../img/s2_img1.png) center center;
     background-size: contain;
-    transform: scale(1);
-}
-.ms-effect-1 .ms-screens .ms-screen-1:hover {
-    transform: scale(1.1);
-}
-.ms-effect-1 .ms-screens .ms-screen-2:hover {
-    transform: scale(1.1);
-}
-.ms-effect-1 .ms-screens .ms-screen-3:hover {
-    transform: scale(1.1);
 }
 .swiper-slide-active{
     .ms-effect-1 .ms-device {

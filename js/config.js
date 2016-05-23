@@ -58,4 +58,15 @@
         ['测试标题4', '测试内容44444']
     ];
 
+    this.isEdge = function(){
+        return window.navigator.userAgent.indexOf('Edge') > -1;
+    };
+    window.onload = function(){
+        if(isEdge()){
+            document.getElementById('edgeShow').style.display = 'block';
+        }else{
+            document.getElementById('notEdgeShow').style.display = 'block';
+        }
+    };
+
 }.call(window));

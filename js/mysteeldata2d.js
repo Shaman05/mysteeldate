@@ -103,6 +103,8 @@
         // 
         var swiper2dsS2 = new Swiper('#s2_contain',{
             pagination : '.swiper-pagination',
+            grabCursor : true,
+            autoplay : 3000
             //pagination : '#swiper-pagination1',
             })
        

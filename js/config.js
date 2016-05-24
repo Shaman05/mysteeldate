@@ -62,6 +62,7 @@
         return window.navigator.userAgent.indexOf('Edge') > -1;
     };
     window.onload = function(){
+        if(is2D)return;
         if(isEdge()){
             document.getElementById('edgeShow').style.display = 'block';
         }else{

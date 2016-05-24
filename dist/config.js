@@ -33,13 +33,6 @@
     this.textShowTimer = null;
     //文本动画切换间隔时间
     this.textShowInterval = 5000;
-    //循环播放文本，添加更多则按格式 ['标题xxx', '内容xxx'] 添加到数组里
-    this.quotesArr = [
-        ['测试标题111', '测试内容111111111'],
-        ['测试标题222', '测试内容22222'],
-        ['测试标题33', '测试内容1111333'],
-        ['测试标题4', '测试内容44444']
-    ];
 
     //三个点对应的文本
     this.pointText = [
@@ -57,10 +50,19 @@
         }
     ];
 
+    //循环播放文本，添加更多则按格式 ['标题xxx', '内容xxx'] 添加到数组里
+    this.quotesArr = [
+        ['测试标题111', '测试内容111111111'],
+        ['测试标题222', '测试内容22222'],
+        ['测试标题33', '测试内容1111333'],
+        ['测试标题4', '测试内容44444']
+    ];
+
     this.isEdge = function(){
         return window.navigator.userAgent.indexOf('Edge') > -1;
     };
     window.onload = function(){
+        if(is2D)return;
         if(isEdge()){
             document.getElementById('edgeShow').style.display = 'block';
         }else{

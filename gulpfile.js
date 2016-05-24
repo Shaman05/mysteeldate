@@ -22,11 +22,11 @@ gulp.task('concat-cdn', function(){
 
 gulp.task('concat-master', function(){
   return gulp.src(['js/master.min.js', 'js/d.js', 'js/mysteeldata.js'])
-  .pipe(concat('master.min.js'))
+  .pipe(concat('master3d.min.js'))
   .pipe(gulp.dest('.build'));
 });
 
-gulp.task('concat-master', function(){
+gulp.task('concat-master2', function(){
   return gulp.src(['js/master.min.js', 'js/d.js', 'js/mysteeldata2d.js'])
   .pipe(concat('master2d.min.js'))
   .pipe(gulp.dest('.build'));
@@ -40,6 +40,14 @@ gulp.task('uglify', ['concat-lib', 'concat-cdn', 'concat-master'], function(){
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['uglify'], function(){
+gulp.task('uglify2', ['concat-lib', 'concat-cdn', 'concat-master2'], function(){
+    return gulp.src('.build/*.js')
+        .pipe(uglify({
+            mangle: true
+        }))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['uglify', 'uglify2'], function(){
   console.log('Done!');
 });

@@ -2,3 +2,5 @@ node_modules
 .idea
 .build
 .sass-cache
+*.zip
+release

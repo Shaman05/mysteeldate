@@ -4,7 +4,6 @@
 @import 'ext/btn';
 @import 'ext/flexbox';
 @import 'jquery.fullPage';
-@import "qiuqiu";
 .clearfix:before,
 .clearfix:after {
     display: table;
@@ -577,7 +576,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     transition: all 5s;
 }
 
-#section0.swiper-slide-active {
+#section0{
     #mainQuoteAll.showMainQuoteAll {
         opacity: 1;
     }
@@ -1238,3 +1237,4 @@ $pulsateBigSize: 14px;
 }
 
 @import 'media';
+@import "qiuqiu";

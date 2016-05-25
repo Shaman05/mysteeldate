@@ -1,0 +1,63 @@
+.qiuqiu{
+    position: absolute;
+    height: 681px;
+    width: 683px;
+    background: url("../img/2d/qiu.png") no-repeat center;
+    left: 8%;
+    bottom: 15%;
+    .rmsj,
+    .zxyc,
+    .zxsj{
+        position: absolute;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        transition: all 1s;
+    }
+    .rmsj:hover,
+    .zxyc:hover,
+    .zxsj:hover{
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+}
+.rmsj{
+    height: 404px;
+    width: 406px;
+    top: 246px;
+    right: -3px;
+    background: url("../img/2d/rmsj.png") no-repeat center;
+
+}
+.zxsj{
+    height: 556px;
+    width: 333px;
+    top: 125px;
+    left: 0;
+    background: url("../img/2d/zxsj.png") no-repeat center;
+}
+.zxyc{
+    height: 346px;
+    width: 574px;
+    top: 7px;
+    left: 78px;
+    background: url("../img/2d/zxyc.png") no-repeat center;
+}
+
+
+#section0 #mainQuoteAll{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -180px;
+    transition: all 1s;
+    overflow: visible;
+    visibility: visible;
+}
+.logo-bar{
+    position: absolute;
+    height: 82px;
+    width: 336px;
+    top: 76px;
+    left: 14px;
+    background: url("../img/2d/logo.png") no-repeat center;
+}

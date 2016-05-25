@@ -6,7 +6,7 @@
 
     "use strict";
 
-    $(function (){
+    /*$(function (){
         var $slideBoard = $('#slideBoard');
         var page1Options = {
             pagination: '.swiper-pagination'
@@ -129,17 +129,11 @@
             $this.addClass('active');
             $logicImgs.removeClass('active').eq($this.index()).addClass('active');
         });
-    });
+    });*/
 
     var $mainQuoteAll = $('#mainQuoteAll');
+    $mainQuoteAll.addClass('showMainQuoteAll');
     var $mainQuote = $('#mainQuote');
-    this.onCreateDiamond = function (diamond){
-        var position = diamond.diamondContainer.position;
-        $mainQuoteAll.css({
-            left: position.x - $mainQuoteAll.outerWidth() / 2,
-            top: position.y - $mainQuoteAll.outerHeight() / 2
-        }).addClass('showMainQuoteAll');
-    };
 
     var $slideBoard = $('#slideBoard');
     this.onPointOver = function (e, object, n, index){

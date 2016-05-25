@@ -14,6 +14,12 @@ gulp.task('concat-lib', function(){
     .pipe(gulp.dest('.build'));
 });
 
+gulp.task('concat-lib2', function(){
+  return gulp.src(['lib2d/*.js'])
+    .pipe(concat('libs2d.min.js'))
+    .pipe(gulp.dest('.build'));
+});
+
 gulp.task('concat-cdn', function(){
   return gulp.src(['cdn/cloudflare/*.js', 'cdn/createjs/*.js'])
     .pipe(concat('cdn.min.js'))
@@ -40,7 +46,7 @@ gulp.task('uglify', ['concat-lib', 'concat-cdn', 'concat-master'], function(){
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('uglify2', ['concat-lib', 'concat-cdn', 'concat-master2'], function(){
+gulp.task('uglify2', ['concat-lib2', 'concat-cdn', 'concat-master2'], function(){
     return gulp.src('.build/*.js')
         .pipe(uglify({
             mangle: true

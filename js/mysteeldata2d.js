@@ -6,10 +6,10 @@
 
     "use strict";
 
-    /*$(function (){
+    $(function (){
         var $slideBoard = $('#slideBoard');
         var page1Options = {
-            pagination: '.swiper-pagination'
+            pagination: '.pagination-stage'
         };
         var page1Swipers = {
             's1': new Swiper('#stage_area1', page1Options),
@@ -25,60 +25,59 @@
         });
 
         var swiper = new Swiper('.whfull', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            mousewheelControl: true,
-            noSwiping: true,
-            direction: 'vertical'
+            pagination: '.pagination',
+            mode : 'vertical',
+            mousewheelControl : true,
+            mousewheelControlForceToAxis : true,
         });
 
          // $('.next-ico').click(function(){
          //    swiper.slideNext();
          // })
 
-        var swiperflip1 = new Swiper('#swiper-effect1', {
-            effect: 'flip',
-            grabCursor: true,
-            onClick: function (swiper){
-                // window.location.href = "http://www.baidu.com";
-                alert('你点了Swiper;');
+        // var swiperflip1 = new Swiper('#swiper-effect1', {
+        //     effect: 'flip',
+        //     grabCursor: true,
+        //     onClick: function (swiper){
+        //         // window.location.href = "http://www.baidu.com";
+        //         alert('你点了Swiper;');
 
-            }
+        //     }
 
-        });
-        var swiperflip2 = new Swiper('#swiper-effect2', {
-            effect: 'flip',
-            grabCursor: true
+        // });
+        // var swiperflip2 = new Swiper('#swiper-effect2', {
+        //     effect: 'flip',
+        //     grabCursor: true
 
-        });
-        var swiperflip3 = new Swiper('#swiper-effect3', {
-            effect: 'flip',
-            grabCursor: true
+        // });
+        // var swiperflip3 = new Swiper('#swiper-effect3', {
+        //     effect: 'flip',
+        //     grabCursor: true
 
-        });
-        var swiperflip4 = new Swiper('#swiper-effect4', {
-            effect: 'flip',
-            grabCursor: true
+        // });
+        // var swiperflip4 = new Swiper('#swiper-effect4', {
+        //     effect: 'flip',
+        //     grabCursor: true
 
-        });
-        var swiperflip5 = new Swiper('#swiper-effect5', {
-            effect: 'flip',
-            grabCursor: true
+        // });
+        // var swiperflip5 = new Swiper('#swiper-effect5', {
+        //     effect: 'flip',
+        //     grabCursor: true
 
-        });
-        var swiperflip6 = new Swiper('#swiper-effect6', {
-            effect: 'flip',
-            grabCursor: true
+        // });
+        // var swiperflip6 = new Swiper('#swiper-effect6', {
+        //     effect: 'flip',
+        //     grabCursor: true
 
-        });
+        // });
 
-        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseover(function(){
-          swiper.lockSwipes();
-        });
+        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseover(function(){
+        //   swiper.lockSwipes();
+        // });
 
-        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
-          swiper.unlockSwipes();
-        });
+        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
+        //   swiper.unlockSwipes();
+        // });
 
     
 
@@ -101,35 +100,36 @@
         //     $(this).parents('.container')[0].style.transform = 'rotateY(' + deg + 'deg)';
         // });
         // 
-        var swiper2dsS2 = new Swiper('#s2_contain',{
-            pagination : '.swiper-pagination',
-            grabCursor : true,
-            autoplay : 3000
-            //pagination : '#swiper-pagination1',
-            })
+        
+        // var swiper2dsS2 = new Swiper('#s2_contain',{
+        //     pagination : '.swiper-pagination',
+        //     grabCursor : true,
+        //     autoplay : 3000
+        //     //pagination : '#swiper-pagination1',
+        //     })
        
-        var $board = $('#section2').find('.board');
-        var $item = $('#s2_contain').find('.swiper-slide');
-        $item.hover(function (){
-            var $this = $(this);
-            var index = $this.index();
-            $board.removeClass('cur').eq(index).addClass('cur');
-            $this.addClass('cur');
-        }, function (){
-            $(this).removeClass('cur');
-        });
+        // var $board = $('#section2').find('.board');
+        // var $item = $('#s2_contain').find('.swiper-slide');
+        // $item.hover(function (){
+        //     var $this = $(this);
+        //     var index = $this.index();
+        //     $board.removeClass('cur').eq(index).addClass('cur');
+        //     $this.addClass('cur');
+        // }, function (){
+        //     $(this).removeClass('cur');
+        // });
 
-        var $section4 = $('#section4');
-        var $logicSwitch = $section4.find('.logic-switch-btn');
-        var $logicImgs = $section4.find('.logic-imgs');
-        $logicImgs.eq(0).addClass('active');
-        $logicSwitch.on('click', function (){
-            var $this = $(this);
-            $logicSwitch.removeClass('active');
-            $this.addClass('active');
-            $logicImgs.removeClass('active').eq($this.index()).addClass('active');
-        });
-    });*/
+        // var $section4 = $('#section4');
+        // var $logicSwitch = $section4.find('.logic-switch-btn');
+        // var $logicImgs = $section4.find('.logic-imgs');
+        // $logicImgs.eq(0).addClass('active');
+        // $logicSwitch.on('click', function (){
+        //     var $this = $(this);
+        //     $logicSwitch.removeClass('active');
+        //     $this.addClass('active');
+        //     $logicImgs.removeClass('active').eq($this.index()).addClass('active');
+        // });
+    });
 
     var $mainQuoteAll = $('#mainQuoteAll');
     $mainQuoteAll.addClass('showMainQuoteAll');

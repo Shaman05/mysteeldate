@@ -431,6 +431,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
              transition: all 1s;
              overflow: hidden;
              background: rgba(0, 0, 0, 0.2);
+             .pagination-stage {
+                 position: absolute;
+                 left: 0;
+                 text-align: center;
+                 bottom:5px;
+                 width: 100%;
+                 .swiper-pagination-switch {
+                      display: inline-block;
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 10px;
+                      background: #999;
+                      box-shadow: 0px 1px 2px #555 inset;
+                      margin: 0 3px;
+                      cursor: pointer;
+                    }
+                .swiper-active-switch {
+                      background: #fff;
+                }
+             }
+
              .swiper-container{
                     position:absolute;
                     width: 100%;
@@ -577,12 +598,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
 }
 
 #section0{
+    .div-opacity{
+        position: relative;
+        opacity: 0;
+        height: 100%;
+    }
+     &.swiper-slide-active {
+        .div-opacity {
+            opacity: 1;
+        }
+    }
     #mainQuoteAll.showMainQuoteAll {
         opacity: 1;
     }
 }
 .square-bg{
    position:relative;
+   opacity: 0;
    margin:0;
    height:90%;
    width: 96%;
@@ -596,6 +628,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
 #section1 {
    // background: url(../img/damand_bg.png) center center #0A2F41;
    background:#211E3C;
+   &.swiper-slide-active {
+        .square-bg {
+            opacity: 1;
+        }
+    }
     h1 {
         background: url(../img/tit-glsj.png) center center;
     }
@@ -755,6 +792,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     .square-bg{
         background: url(../img/damand_bg.png) center center #5480C7;
     }
+     &.swiper-slide-active {
+        .square-bg {
+            opacity: 1;
+        }
+    }
     h1 {
         background: url(../img/tit-tsyj.png) center center;
     }
@@ -872,6 +914,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     background:#211E3C;
     .square-bg{
         background: url(../img/damand_bg.png) center center #74B35B;
+    }
+     &.swiper-slide-active {
+        .square-bg {
+            opacity: 1;
+        }
     }
     h1 {
         background: url(../img/tit-yjzt.png) center center;
@@ -1049,6 +1096,11 @@ $pulsateBigSize: 14px;
     .square-bg{
         background: url(../img/damand_bg.png) center center #309ABB;
     }
+     &.swiper-slide-active {
+        .square-bg {
+            opacity: 1;
+        }
+    }
     h1 {
         background: url(../img/tit-ljtj.png) center center;
     }
@@ -1189,50 +1241,83 @@ $pulsateBigSize: 14px;
 
 #section5 {
     background: #1A062A;
-    .s5-top {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 8px;
-        background: url(../img/s5_top_bg.png) repeat-x left top;
-    }
-    .s5-logo {
-        display: inline-block;
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 30%;
-        height: 20%;
-        background: url(../img/s1_logo@2.png) no-repeat center center;
-        background-size: contain;
-    }
-    .weixin-img{
-        position:absolute;
-        top: 50%;
-        left: 20%;
-        width: 120px;
-        height: 120px;
-        overflow: hidden;
-        text-align: center;
-        background:#fff;
-        img{
-            padding:10px 0 0;
+    .div-opacity {
+        position: relative;
+        opacity: 0;
+        height: 100%;
+        .s5-top {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 8px;
+            background: url(../img/s5_top_bg.png) repeat-x left top;
         }
-         @include border-radius(3px);
-    }
-    .txt-contact{
-        position:absolute;
-        top: 45%;
-        left: 40%;
-        @include font-fsc1($f-sty: $fontYaHei, $fs: 22px, $fc: #fff, $f-lh: 220%);
-        h2{
-            margin-bottom: 15px;
-            font-size: 22px;
-            font-weight:normal;
+        .s5-logo {
+            display: inline-block;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 30%;
+            height: 20%;
+            background: url(../img/s1_logo@2.png) no-repeat center center;
+            background-size: contain;
         }
+        .weixin-img {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            text-align: center;
+            background: #fff;
+            img {
+                padding: 10px 0 0;
+            }
+            @include border-radius(3px);
+        }
+        .txt-contact {
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            @include font-fsc1($f-sty: $fontYaHei, $fs: 22px, $fc: #fff, $f-lh: 220%);
+            h2 {
+                margin-bottom: 15px;
+                font-size: 22px;
+                font-weight: normal;
+            }
+        }
+    }
+    &.swiper-slide-active {
+        .div-opacity {
+            position: relative;
+            opacity: 1;
+            height: 100%;
+        }
+    }
+}
 
+.pagination {
+    position: absolute;
+    z-index: 10;
+    z-index: 20;
+    right: 10px;
+    top: 50%;
+    text-align: center;
+    .swiper-pagination-switch {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background: #D0C4C4;
+        margin: 0 0px 5px;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    .swiper-active-switch {
+        background: #007aff;
     }
 }
 

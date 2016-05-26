@@ -421,16 +421,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     }
     .stage_area-2d{
              position: absolute;
-             width: 35%;
+             width: 400px;
              height: 50%;
              margin:auto;
              top:0;
              bottom:0;
-             right:10%;
+             right:13%;
              opacity: 0;
              transition: all 1s;
              overflow: hidden;
              background: rgba(0, 0, 0, 0.2);
+      
              .pagination-stage {
                  position: absolute;
                  left: 0;
@@ -451,7 +452,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
                       background: #fff;
                 }
              }
-
+            #stage_area1{
+                background:  rgba(52, 49, 80, 0.2);
+            }
+             #stage_area2{
+                background:  rgba(140, 114, 148, 0.2);
+            }
+             #stage_area3{
+                background:  rgba(38, 121, 88, 0.2);
+            }
              .swiper-container{
                     position:absolute;
                     width: 100%;
@@ -461,6 +470,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
                     transition: all 0.5s;
                     .swiper-wrapper{
                         //padding:20px;
+                        height: 100% !important;
                         .swiper-slide{
                             width: 100%;
                             h4 {

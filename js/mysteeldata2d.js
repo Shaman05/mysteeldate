@@ -9,12 +9,22 @@
     $(function (){
         var $slideBoard = $('#slideBoard');
         var page1Options = {
-            //pagination: '.pagination-stage'
+            pagination: '.pagination-stage',
+            grabCursor : true
         };
         var page1Swipers = {
-            's1': new Swiper('#stage_area1', page1Options),
-            's2': new Swiper('#stage_area2', page1Options),
-            's3': new Swiper('#stage_area3', page1Options)
+            's1': new Swiper('#stage_area1',  {
+            pagination: '.pagination-s1',
+            grabCursor : true
+        }),
+            's2': new Swiper('#stage_area2',  {
+            pagination: '.pagination-s2',
+            grabCursor : true
+        }),
+            's3': new Swiper('#stage_area3',  {
+            pagination: '.pagination-s3',
+            grabCursor : true
+        })
         };
          $slideBoard.css('opacity', '1');
         // $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
@@ -29,6 +39,7 @@
             mode : 'vertical',
             mousewheelControl : true,
             mousewheelControlForceToAxis : true,
+            noSwiping : true
         });
 
          // $('.next-ico').click(function(){
@@ -71,13 +82,16 @@
 
         // });
 
-        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseover(function(){
-        //   swiper.lockSwipes();
-        // });
+        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseover(function(){
+          //swiper.lockSwipes();
+         // console.log( swiper.slides[swiper.activeIndex])
+          $(swiper.slides[swiper.activeIndex]).addClass("swiper-no-swiping")
+        });
 
-        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
-        //   swiper.unlockSwipes();
-        // });
+        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
+         // swiper.unlockSwipes();
+          $(swiper.slides[swiper.activeIndex]).removeClass("swiper-no-swiping")
+        });
 
     
 
@@ -103,7 +117,7 @@
         
         var swiper2dsS2 = new Swiper('#s2_contain',{
             pagination : '.swiper-pagination',
-           // grabCursor : true,
+            grabCursor : true,
             autoplay : 3000
             })
        

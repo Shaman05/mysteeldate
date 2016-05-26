@@ -17,12 +17,12 @@
             's3': new Swiper('#stage_area3', page1Options)
         };
          $slideBoard.css('opacity', '1');
-        $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
-            var $this = $(this);
-            var swiperObjIndex = $this.attr('data-index');
-            var index = $this.index();
-            page1Swipers['s' + swiperObjIndex].slideTo(index, 350, false);
-        });
+        // $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
+        //     var $this = $(this);
+        //     var swiperObjIndex = $this.attr('data-index');
+        //     var index = $this.index();
+        //     page1Swipers['s' + swiperObjIndex].slideTo(index, 350, false);
+        // });
 
         var swiper = new Swiper('.whfull', {
             pagination: '.pagination',
@@ -136,6 +136,10 @@
     var $mainQuote = $('#mainQuote');
 
     var $slideBoard = $('#slideBoard');
+    $('.color-block').hover(function(){
+        var index = $(this).index('.color-block');
+        $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');
+    });
     this.onPointOver = function (e, object, n, index){
         setMainQuoteText(pointText[index]['title'], pointText[index]['desc']);
         $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');

@@ -9,7 +9,7 @@
     $(function (){
         var $slideBoard = $('#slideBoard');
         var page1Options = {
-            pagination: '.pagination-stage'
+            //pagination: '.pagination-stage'
         };
         var page1Swipers = {
             's1': new Swiper('#stage_area1', page1Options),
@@ -101,34 +101,33 @@
         // });
         // 
         
-        // var swiper2dsS2 = new Swiper('#s2_contain',{
-        //     pagination : '.swiper-pagination',
-        //     grabCursor : true,
-        //     autoplay : 3000
-        //     //pagination : '#swiper-pagination1',
-        //     })
+        var swiper2dsS2 = new Swiper('#s2_contain',{
+            pagination : '.swiper-pagination',
+           // grabCursor : true,
+            autoplay : 3000
+            })
        
-        // var $board = $('#section2').find('.board');
-        // var $item = $('#s2_contain').find('.swiper-slide');
-        // $item.hover(function (){
-        //     var $this = $(this);
-        //     var index = $this.index();
-        //     $board.removeClass('cur').eq(index).addClass('cur');
-        //     $this.addClass('cur');
-        // }, function (){
-        //     $(this).removeClass('cur');
-        // });
+        var $board = $('#section2').find('.board');
+        var $item = $('#s2_contain').find('.swiper-slide');
+        $item.hover(function (){
+            var $this = $(this);
+            var index = $this.index();
+            $board.removeClass('cur').eq(index).addClass('cur');
+            $this.addClass('cur');
+        }, function (){
+            $(this).removeClass('cur');
+        });
 
-        // var $section4 = $('#section4');
-        // var $logicSwitch = $section4.find('.logic-switch-btn');
-        // var $logicImgs = $section4.find('.logic-imgs');
-        // $logicImgs.eq(0).addClass('active');
-        // $logicSwitch.on('click', function (){
-        //     var $this = $(this);
-        //     $logicSwitch.removeClass('active');
-        //     $this.addClass('active');
-        //     $logicImgs.removeClass('active').eq($this.index()).addClass('active');
-        // });
+        var $section4 = $('#section4');
+        var $logicSwitch = $section4.find('.logic-switch-btn');
+        var $logicImgs = $section4.find('.logic-imgs');
+        $logicImgs.eq(0).addClass('active');
+        $logicSwitch.on('click', function (){
+            var $this = $(this);
+            $logicSwitch.removeClass('active');
+            $this.addClass('active');
+            $logicImgs.removeClass('active').eq($this.index()).addClass('active');
+        });
     });
 
     var $mainQuoteAll = $('#mainQuoteAll');

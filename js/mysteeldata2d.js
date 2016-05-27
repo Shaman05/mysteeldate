@@ -15,14 +15,17 @@
         var page1Swipers = {
             's1': new Swiper('#stage_area1',  {
             pagination: '.pagination-s1',
+            paginationClickable :true,
             grabCursor : true
         }),
             's2': new Swiper('#stage_area2',  {
             pagination: '.pagination-s2',
+            paginationClickable :true,
             grabCursor : true
         }),
             's3': new Swiper('#stage_area3',  {
             pagination: '.pagination-s3',
+            paginationClickable :true,
             grabCursor : true
         })
         };
@@ -36,8 +39,10 @@
 
         var swiper = new Swiper('.whfull', {
             pagination: '.pagination',
+            paginationClickable :true,
             mode : 'vertical',
             mousewheelControl : true,
+            keyboardControl : true,
             mousewheelControlForceToAxis : true,
             noSwiping : true
         });
@@ -46,50 +51,50 @@
          //    swiper.slideNext();
          // })
 
-        // var swiperflip1 = new Swiper('#swiper-effect1', {
-        //     effect: 'flip',
-        //     grabCursor: true,
-        //     onClick: function (swiper){
-        //         // window.location.href = "http://www.baidu.com";
-        //         alert('你点了Swiper;');
+        var swiperflip1 = new Swiper('#swiper-effect1', {
+            effect: 'flip',
+            grabCursor: true,
+            preventLinks : false, 
+            // onSlideClick: function(swiper){
+            //   alert('事件触发了;');
+            // }
+        });
+        
+        var swiperflip2 = new Swiper('#swiper-effect2', {
+            grabCursor: true,
+            preventLinks : false //当slide正在被touch时swiper阻止点击链接
 
-        //     }
+        });
+        var swiperflip3 = new Swiper('#swiper-effect3', {
+            grabCursor: true,
+            preventLinks : false
 
-        // });
-        // var swiperflip2 = new Swiper('#swiper-effect2', {
-        //     effect: 'flip',
-        //     grabCursor: true
 
-        // });
-        // var swiperflip3 = new Swiper('#swiper-effect3', {
-        //     effect: 'flip',
-        //     grabCursor: true
+        });
+        var swiperflip4 = new Swiper('#swiper-effect4', {
+            grabCursor: true,
+            preventLinks : false
 
-        // });
-        // var swiperflip4 = new Swiper('#swiper-effect4', {
-        //     effect: 'flip',
-        //     grabCursor: true
+        });
+        var swiperflip5 = new Swiper('#swiper-effect5', {
+            grabCursor: true,
+            preventLinks : false
 
-        // });
-        // var swiperflip5 = new Swiper('#swiper-effect5', {
-        //     effect: 'flip',
-        //     grabCursor: true
+        });
+        var swiperflip6 = new Swiper('#swiper-effect6', {
+             grabCursor: true,
+            preventLinks : false
 
-        // });
-        // var swiperflip6 = new Swiper('#swiper-effect6', {
-        //     effect: 'flip',
-        //     grabCursor: true
-
-        // });
+        });
 
         $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseover(function(){
-          //swiper.lockSwipes();
+
          // console.log( swiper.slides[swiper.activeIndex])
           $(swiper.slides[swiper.activeIndex]).addClass("swiper-no-swiping")
         });
 
         $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
-         // swiper.unlockSwipes();
+  
           $(swiper.slides[swiper.activeIndex]).removeClass("swiper-no-swiping")
         });
 
@@ -117,6 +122,7 @@
         
         var swiper2dsS2 = new Swiper('#s2_contain',{
             pagination : '.swiper-pagination',
+            paginationClickable :true,
             grabCursor : true,
             autoplay : 3000
             })

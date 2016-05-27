@@ -46,7 +46,8 @@
             mousewheelControlForceToAxis : true,
             noSwiping : true
         });
-
+        
+       
          // $('.next-ico').click(function(){
          //    swiper.slideNext();
          // })

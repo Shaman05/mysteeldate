@@ -13,21 +13,21 @@
             grabCursor : true
         };
         var page1Swipers = {
-            's1': new Swiper('#stage_area1',  {
-            pagination: '.pagination-s1',
-            paginationClickable :true,
-            grabCursor : true
-        }),
-            's2': new Swiper('#stage_area2',  {
-            pagination: '.pagination-s2',
-            paginationClickable :true,
-            grabCursor : true
-        }),
-            's3': new Swiper('#stage_area3',  {
-            pagination: '.pagination-s3',
-            paginationClickable :true,
-            grabCursor : true
-        })
+                's1': new Swiper('#stage_area1',  {
+                pagination: '.pagination-s1',
+                paginationClickable :true,
+                grabCursor : true
+            }),
+                's2': new Swiper('#stage_area2',  {
+                pagination: '.pagination-s2',
+                paginationClickable :true,
+                grabCursor : true
+            }),
+                's3': new Swiper('#stage_area3',  {
+                pagination: '.pagination-s3',
+                paginationClickable :true,
+                grabCursor : true
+            })
         };
          $slideBoard.css('opacity', '1');
         // $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
@@ -37,15 +37,15 @@
         //     page1Swipers['s' + swiperObjIndex].slideTo(index, 350, false);
         // });
 
-        var swiper = new Swiper('.whfull', {
-            pagination: '.pagination',
-            paginationClickable :true,
-            mode : 'vertical',
-            mousewheelControl : true,
-            keyboardControl : true,
-            mousewheelControlForceToAxis : true,
-            noSwiping : true
-        });
+        // var swiper = new Swiper('.whfull', {
+        //     pagination: '.pagination',
+        //     paginationClickable :true,
+        //     mode : 'vertical',
+        //     mousewheelControl : true,
+        //     keyboardControl : true,
+        //     mousewheelControlForceToAxis : true,
+        //     noSwiping : true
+        // });
         
        
          // $('.next-ico').click(function(){
@@ -88,27 +88,28 @@
 
         });
 
-        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseover(function(){
+        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseover(function(){
 
-         // console.log( swiper.slides[swiper.activeIndex])
-          $(swiper.slides[swiper.activeIndex]).addClass("swiper-no-swiping")
-        });
+        //  // console.log( swiper.slides[swiper.activeIndex])
+        //   $(swiper.slides[swiper.activeIndex]).addClass("swiper-no-swiping")
+        // });
 
-        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
+        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
   
-          $(swiper.slides[swiper.activeIndex]).removeClass("swiper-no-swiping")
-        });
+        //   $(swiper.slides[swiper.activeIndex]).removeClass("swiper-no-swiping")
+        // });
 
     
 
-        // $('#fullpage').fullpage({
-        //   anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-        //   sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
-        //   navigation: true,
-        //   verticalCentered: false, //内容是否垂直居中
-        //   navigationPosition: 'right',
-        //   navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
-        // });
+        $('#fullpage').fullpage({
+          anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+          sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
+          navigation: true,
+          verticalCentered: false, //内容是否垂直居中
+          navigationPosition: 'right',
+          normalScrollElements: '#section2 .board .scroll-box',
+          navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
+        });
 
         // var $rotateContain = $('.container');
         // setTimeout(function (){

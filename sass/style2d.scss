@@ -613,7 +613,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         opacity: 0;
         height: 100%;
     }
-     &.swiper-slide-active {
+     &.swiper-slide-active,&.active  {
         .div-opacity {
             opacity: 1;
         }
@@ -638,7 +638,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
 #section1 {
    // background: url(../img/damand_bg.png) center center #0A2F41;
    background:#211E3C;
-   &.swiper-slide-active {
+  &.swiper-slide-active,&.active {
         .square-bg {
             opacity: 1;
         }
@@ -802,7 +802,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     .square-bg{
         background: url(../img/damand_bg.png) center center #5480C7;
     }
-     &.swiper-slide-active {
+     &.swiper-slide-active,&.active {
         .square-bg {
             opacity: 1;
         }
@@ -933,7 +933,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         -ms-transition: all 0.5s;
         border: 1px solid #fff;
     }
-    &.swiper-slide-active {
+    &.swiper-slide-active,&.active {
         .board.cur {
             opacity: 1;
         }
@@ -945,7 +945,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     .square-bg{
         background: url(../img/damand_bg.png) center center #74B35B;
     }
-     &.swiper-slide-active {
+     &.swiper-slide-active,&.active{
         .square-bg {
             opacity: 1;
         }
@@ -1126,7 +1126,7 @@ $pulsateBigSize: 14px;
     .square-bg{
         background: url(../img/damand_bg.png) center center #309ABB;
     }
-     &.swiper-slide-active {
+     &.swiper-slide-active,&.active {
         .square-bg {
             opacity: 1;
         }
@@ -1172,8 +1172,10 @@ $pulsateBigSize: 14px;
             margin: 2% 1%;
             padding: 1%;
             display: inline-block;
-            height: 40%;
             width: 26%;
+            // height:40%;
+           // width:260px;
+            height:240px;
             border: 1px solid #349CBC;
             @include bgcolor-alpha($bgcolor: rgba(248, 246,249, 0.4));
             .box {
@@ -1187,13 +1189,18 @@ $pulsateBigSize: 14px;
                 .swiper-container {
                     width: 100%;
                     height: 100%;
-                    .swiper-slide {
-                        position: relative;
-                        background-position: center;
-                        background-size: cover;
+                    .swiper-wrapper{
                         width: 100%;
                         height: 100%;
+                        .swiper-slide {
+                            position: relative;
+                            background-position: center;
+                            background-size: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
+                    
                 }
                 h4 {
                     position: absolute;
@@ -1249,25 +1256,25 @@ $pulsateBigSize: 14px;
                         opacity: 0;
                     }
                 }
-                &:hover {
-                    .swiper-slide-active{
-                         h4 {
-                             opacity: 0;
-                         }
-                         p,
-                         h3 {
-                             opacity: 1;
-                         }
+                // &:hover {
+                //     .swiper-slide-active{
+                //          h4 {
+                //              opacity: 0;
+                //          }
+                //          p,
+                //          h3 {
+                //              opacity: 1;
+                //          }
 
-                     }
-                }
+                //      }
+                // }
             }
         }
         &.active {
             opacity: 1;
         }
     }
-    &.swiper-slide-active {
+   &.swiper-slide-active,&.active {
         .logic-switch {
             opacity: 1;
         }
@@ -1325,7 +1332,7 @@ $pulsateBigSize: 14px;
             }
         }
     }
-    &.swiper-slide-active {
+    &.swiper-slide-active,&.active{
         .div-opacity {
             position: relative;
             opacity: 1;

@@ -4,7 +4,8 @@
     width: 683px;
     background: url("../img/2d/qiu.png") no-repeat center;
     left: 8%;
-    bottom: 15%;
+    top: 50%;
+    margin-top: -315px;
     .rmsj,
     .zxyc,
     .zxsj {
@@ -47,18 +48,16 @@
 }
 
 #section0 #mainQuoteAll {
-    position: absolute;
-    transition: all 1s;
+
     overflow: visible;
     visibility: visible;
 }
 
 .logo-bar {
-    position: absolute;
+    display: block;
+    margin:0 auto;
     height: 82px;
     width: 336px;
-    top: 76px;
-    left: 14px;
     background: url("../img/2d/logo.png") no-repeat center;
 }
 
@@ -67,7 +66,7 @@
         height: 468px;
         width: 471px;
         background: url("../img/2dmin/qiu.png") no-repeat center;
-        bottom: 10%;
+        margin-top: -175px;
     }
     #section0 .stage_area-2d {
         margin-top: 15%;
@@ -110,7 +109,6 @@
         padding: 0 50px;
     }
     #section0 #mainQuoteAll {
-        top: 140px;
-        left: 65px;
+       height: 471px;
     }
 }

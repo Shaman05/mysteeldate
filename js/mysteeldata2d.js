@@ -111,6 +111,7 @@
           navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
         });
 
+    
         // var $rotateContain = $('.container');
         // setTimeout(function (){
         //     $rotateContain.eq(0).addClass('cur');
@@ -126,8 +127,19 @@
             pagination : '.swiper-pagination',
             paginationClickable :true,
             grabCursor : true,
+            //loop: true,
             autoplay : 3000
-            })
+            });
+
+        $("#s2_contain").mouseover(function(){
+          swiper2dsS2.stopAutoplay();
+          console.log("mouseover")
+        });
+
+         $("#s2_contain").mouseout(function(){
+          swiper2dsS2.startAutoplay();
+          console.log("mouseout")
+        });
        
         var $board = $('#section2').find('.board');
         var $item = $('#s2_contain').find('.swiper-slide');

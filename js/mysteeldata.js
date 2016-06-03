@@ -36,13 +36,13 @@
             page1Swipers['s' + swiperObjIndex].slideTo(index, 350, false);
         });
 
-        var swiper = new Swiper('.whfull', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            mousewheelControl: true,
-            noSwiping: true,
-            direction: 'vertical'
-        });
+        // var swiper = new Swiper('.whfull', {
+        //     pagination: '.swiper-pagination',
+        //     paginationClickable: true,
+        //     mousewheelControl: true,
+        //     noSwiping: true,
+        //     direction: 'vertical'
+        // });
 
         // $('.next-ico').click(function(){
         //     swiper.slideNext();
@@ -84,22 +84,23 @@
 
         });
 
-        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img").mouseover(function(){
-          swiper.lockSwipes();
-        });
-
-        $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img").mouseout(function(){
-          swiper.unlockSwipes();
-        });
-
-        // $('#fullpage').fullpage({
-        //   anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-        //   sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
-        //   navigation: true,
-        //   verticalCentered: false, //内容是否垂直居中
-        //   navigationPosition: 'right',
-        //   navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
+        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img").mouseover(function(){
+        //   swiper.lockSwipes();
         // });
+
+        // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img").mouseout(function(){
+        //   swiper.unlockSwipes();
+        // });
+
+         $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+            sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
+            navigation: true,
+            verticalCentered: false, //内容是否垂直居中
+            navigationPosition: 'right',
+            normalScrollElements: '#section2 .board .scroll-box',
+            navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
+        });
 
         var $rotateContain = $('.container');
         setTimeout(function (){

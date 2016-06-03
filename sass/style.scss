@@ -46,7 +46,7 @@ body {
     transition: all 1s;
     -ms-transition: all 1s;
 }
-.swiper-slide-active{
+.active{
     .three_contain{
         transform: rotateX(60deg) rotateZ(30deg);
         -ms-transform: none;
@@ -74,7 +74,7 @@ body {
     background: url(../img/s2_img1.png) center center;
     background-size: contain;
 }
-.swiper-slide-active .three_item0{
+.active .three_item0{
     -ms-transform: rotateX(60deg) rotateZ(30deg) translateZ(-80px);
 }
 .three_item0:hover{
@@ -87,7 +87,7 @@ body {
     background: url(../img/s2_img1.png) center center;
     background-size: contain;
 }
-.swiper-slide-active .three_item1{
+.active .three_item1{
     -ms-transform: rotateX(60deg) rotateZ(30deg) translateZ(0);
 }
 .three_item1:hover{
@@ -100,7 +100,7 @@ body {
     background: url(../img/s2_img2.png) center center;
     background-size: contain;
 }
-.swiper-slide-active .three_item2{
+.active .three_item2{
     -ms-transform: rotateX(60deg) rotateZ(30deg) translateZ(80px);
 }
 .three_item2:hover{
@@ -166,7 +166,7 @@ body {
     background: url(../img/s2_img1.png) center center;
     background-size: contain;
 }
-.swiper-slide-active{
+.active{
     .ms-effect-1 .ms-device {
         -webkit-transform: rotateX(60deg) rotateZ(30deg);
         -moz-transform: rotateX(60deg) rotateZ(30deg);
@@ -200,6 +200,8 @@ body {
     //background: url('../img/top_bg.png') no-repeat center top;
    // @include bgcolor-alpha($bgcolor: rgba(24, 46, 77, 0.3));
     .tn-header {
+        position: relative;
+        z-index: 2;
         width: 100%;
         height: 120px;
         margin: 0 auto;
@@ -227,7 +229,34 @@ body {
             li {
                 padding: 0 35px;
                 float: left;
+                position: relative;
                 @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #fff, $f-lh: 40px);
+                dl{
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    left:0;
+                    top: 40px;
+                    padding: 2px 0 0;
+                    dd{
+                        background:rgba(44, 69, 86, 0.7);
+                        padding:10px 5px;
+                        text-align: center;
+                       @include font-fsc1($f-sty: $fontYaHei, $fs: 15px, $fc: #fff, $f-lh:24px);
+                       &:hover{
+                           background: #4DC2E3;
+                           cursor: pointer;
+                       }
+                    }
+                    &:hover{
+                         display: block; 
+                    }
+                }
+                &:hover{
+                   dl{
+                       display: block; 
+                    }
+                }
                 a {
                     color: #4DC2E3;
                     &:hover {
@@ -267,7 +296,7 @@ body {
     transition: all 0.2s;
     opacity: 0;
 }
-.swiper-slide-active #canvasPIXI{
+.active #canvasPIXI{
     opacity: 1;
 }
 
@@ -577,13 +606,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     transition: all 5s;
 }
 
-#section0.swiper-slide-active {
+#section0.active {
     #mainQuoteAll.showMainQuoteAll {
         opacity: 1;
     }
 }
 .square-bg{
    position:relative;
+   opacity: 0;
    margin:0;
    height:90%;
    width: 96%;
@@ -597,6 +627,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
 #section1 {
    // background: url(../img/damand_bg.png) center center #0A2F41;
    background:#211E3C;
+   &.active {
+        .square-bg {
+            opacity: 1;
+        }
+    }
     h1 {
         background: url(../img/tit-glsj.png) center center;
     }
@@ -756,6 +791,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     .square-bg{
         background: url(../img/damand_bg.png) center center #5480C7;
     }
+    &.active{
+        .square-bg {
+            opacity: 1;
+        }
+    }
     h1 {
         background: url(../img/tit-tsyj.png) center center;
     }
@@ -862,7 +902,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         -ms-transition: all 0.5s;
         border: 1px solid #fff;
     }
-    &.swiper-slide-active {
+    &.active {
         .board.cur {
             opacity: 1;
         }
@@ -873,6 +913,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     background:#211E3C;
     .square-bg{
         background: url(../img/damand_bg.png) center center #74B35B;
+    }
+    &.active{
+        .square-bg {
+            opacity: 1;
+        }
     }
     h1 {
         background: url(../img/tit-yjzt.png) center center;
@@ -1050,6 +1095,11 @@ $pulsateBigSize: 14px;
     .square-bg{
         background: url(../img/damand_bg.png) center center #309ABB;
     }
+    &.active {
+        .square-bg {
+            opacity: 1;
+        }
+    }
     h1 {
         background: url(../img/tit-ljtj.png) center center;
     }
@@ -1064,7 +1114,6 @@ $pulsateBigSize: 14px;
         .logic-switch-btn {
             display: block;
             width: 230px;
-            ;
             margin: 18% auto 30px;
             height: 74px;
             border: 2px solid #fff;
@@ -1181,7 +1230,7 @@ $pulsateBigSize: 14px;
             opacity: 1;
         }
     }
-    &.swiper-slide-active {
+    &.active {
         .logic-switch {
             opacity: 1;
         }
@@ -1190,50 +1239,61 @@ $pulsateBigSize: 14px;
 
 #section5 {
     background: #1A062A;
-    .s5-top {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 8px;
-        background: url(../img/s5_top_bg.png) repeat-x left top;
-    }
-    .s5-logo {
-        display: inline-block;
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 30%;
-        height: 20%;
-        background: url(../img/s1_logo@2.png) no-repeat center center;
-        background-size: contain;
-    }
-    .weixin-img{
-        position:absolute;
-        top: 50%;
-        left: 20%;
-        width: 120px;
-        height: 120px;
-        overflow: hidden;
-        text-align: center;
-        background:#fff;
-        img{
-            padding:10px 0 0;
+    .div-opacity {
+        position: relative;
+        opacity: 0;
+        height: 100%;
+        .s5-top {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 8px;
+            background: url(../img/s5_top_bg.png) repeat-x left top;
         }
-         @include border-radius(3px);
-    }
-    .txt-contact{
-        position:absolute;
-        top: 45%;
-        left: 40%;
-        @include font-fsc1($f-sty: $fontYaHei, $fs: 22px, $fc: #fff, $f-lh: 220%);
-        h2{
-            margin-bottom: 15px;
-            font-size: 22px;
-            font-weight:normal;
+        .s5-logo {
+            display: inline-block;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 30%;
+            height: 20%;
+            background: url(../img/s1_logo@2.png) no-repeat center center;
+            background-size: contain;
         }
-
+        .weixin-img {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            text-align: center;
+            background: #fff;
+            img {
+                padding: 10px 0 0;
+            }
+            @include border-radius(3px);
+        }
+        .txt-contact {
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            @include font-fsc1($f-sty: $fontYaHei, $fs: 22px, $fc: #fff, $f-lh: 220%);
+            h2 {
+                margin-bottom: 15px;
+                font-size: 22px;
+                font-weight: normal;
+            }
+        }
+    }
+    &.active{
+        .div-opacity {
+            position: relative;
+            opacity: 1;
+            height: 100%;
+        }
     }
 }
 

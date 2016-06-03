@@ -2,34 +2,34 @@
  * Created by ChenChao on 2016/3/28.
  */
 
-(function (){
+(function() {
 
     "use strict";
 
-    $(function (){
+    $(function() {
         var $slideBoard = $('#slideBoard');
         var page1Options = {
             pagination: '.pagination-stage',
-            grabCursor : true
+            grabCursor: true
         };
         var page1Swipers = {
-                's1': new Swiper('#stage_area1',  {
+            's1': new Swiper('#stage_area1', {
                 pagination: '.pagination-s1',
-                paginationClickable :true,
-                grabCursor : true
+                paginationClickable: true,
+                grabCursor: true
             }),
-                's2': new Swiper('#stage_area2',  {
+            's2': new Swiper('#stage_area2', {
                 pagination: '.pagination-s2',
-                paginationClickable :true,
-                grabCursor : true
+                paginationClickable: true,
+                grabCursor: true
             }),
-                's3': new Swiper('#stage_area3',  {
+            's3': new Swiper('#stage_area3', {
                 pagination: '.pagination-s3',
-                paginationClickable :true,
-                grabCursor : true
+                paginationClickable: true,
+                grabCursor: true
             })
         };
-         $slideBoard.css('opacity', '1');
+       
         // $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
         //     var $this = $(this);
         //     var swiperObjIndex = $this.attr('data-index');
@@ -46,45 +46,45 @@
         //     mousewheelControlForceToAxis : true,
         //     noSwiping : true
         // });
-        
-       
-         // $('.next-ico').click(function(){
-         //    swiper.slideNext();
-         // })
+
+
+        // $('.next-ico').click(function(){
+        //    swiper.slideNext();
+        // })
 
         var swiperflip1 = new Swiper('#swiper-effect1', {
             effect: 'flip',
             grabCursor: true,
-            preventLinks : false, 
+            preventLinks: false,
             // onSlideClick: function(swiper){
             //   alert('事件触发了;');
             // }
         });
-        
+
         var swiperflip2 = new Swiper('#swiper-effect2', {
             grabCursor: true,
-            preventLinks : false //当slide正在被touch时swiper阻止点击链接
+            preventLinks: false //当slide正在被touch时swiper阻止点击链接
 
         });
         var swiperflip3 = new Swiper('#swiper-effect3', {
             grabCursor: true,
-            preventLinks : false
+            preventLinks: false
 
 
         });
         var swiperflip4 = new Swiper('#swiper-effect4', {
             grabCursor: true,
-            preventLinks : false
+            preventLinks: false
 
         });
         var swiperflip5 = new Swiper('#swiper-effect5', {
             grabCursor: true,
-            preventLinks : false
+            preventLinks: false
 
         });
         var swiperflip6 = new Swiper('#swiper-effect6', {
-             grabCursor: true,
-            preventLinks : false
+            grabCursor: true,
+            preventLinks: false
 
         });
 
@@ -95,23 +95,23 @@
         // });
 
         // $(".logic-imgs .box,.logic-switch-btn,.contain-zt-list .item,#section1 .s1-img,#s2_contain").mouseout(function(){
-  
+
         //   $(swiper.slides[swiper.activeIndex]).removeClass("swiper-no-swiping")
         // });
 
-    
+
 
         $('#fullpage').fullpage({
-          anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-          sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
-          navigation: true,
-          verticalCentered: false, //内容是否垂直居中
-          navigationPosition: 'right',
-          normalScrollElements: '#section2 .board .scroll-box',
-          navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+            sectionsColor: ['#0D2241', '#0A2F41', '#444081', '#28233B', '#502373', '#1A062A'],
+            navigation: true,
+            verticalCentered: false, //内容是否垂直居中
+            navigationPosition: 'right',
+            normalScrollElements: '#section2 .board .scroll-box',
+            navigationTooltips: ['mysteelData1', 'mysteelData2', 'mysteelData3', 'mysteelData4', 'mysteelData5', 'mysteelData6']
         });
 
-    
+
         // var $rotateContain = $('.container');
         // setTimeout(function (){
         //     $rotateContain.eq(0).addClass('cur');
@@ -122,33 +122,38 @@
         //     $(this).parents('.container')[0].style.transform = 'rotateY(' + deg + 'deg)';
         // });
         // 
-        
-        var swiper2dsS2 = new Swiper('#s2_contain',{
-            pagination : '.swiper-pagination',
-            paginationClickable :true,
-            grabCursor : true,
+        var swiper2dsS2 = new Swiper('#s2_contain', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            grabCursor: true,
             //loop: true,
-            autoplay : 3000
-            });
+            autoplay: 3000,
+            onSlideChangeEnd: function(swiper) {
+                console.log(swiper.activeIndex % 3)
+               $slideBoard.find('.swiper-container').removeClass('cur').eq(swiper.activeIndex % 3).addClass('cur');
 
-        $("#s2_contain").mouseover(function(){
-          swiper2dsS2.stopAutoplay();
-          console.log("mouseover")
+            }
         });
 
-         $("#s2_contain").mouseout(function(){
-          swiper2dsS2.startAutoplay();
-          console.log("mouseout")
+        $("#s2_contain").mouseover(function() {
+            swiper2dsS2.stopAutoplay();
+            // console.log("mouseover")
         });
-       
+
+        $("#s2_contain").mouseout(function() {
+           swiper2dsS2.startAutoplay();
+            //console.log("mouseout")
+        });
+
         var $board = $('#section2').find('.board');
         var $item = $('#s2_contain').find('.swiper-slide');
-        $item.hover(function (){
+        $item.hover(function() {
             var $this = $(this);
             var index = $this.index();
-            $board.removeClass('cur').eq(index).addClass('cur');
+           // console.log(index % 3-1)
+            $board.removeClass('cur').eq(index % 3-1).addClass('cur');
             $this.addClass('cur');
-        }, function (){
+        }, function() {
             $(this).removeClass('cur');
         });
 
@@ -156,7 +161,7 @@
         var $logicSwitch = $section4.find('.logic-switch-btn');
         var $logicImgs = $section4.find('.logic-imgs');
         $logicImgs.eq(0).addClass('active');
-        $logicSwitch.on('click', function (){
+        $logicSwitch.on('click', function() {
             var $this = $(this);
             $logicSwitch.removeClass('active');
             $this.addClass('active');
@@ -168,28 +173,24 @@
     $mainQuoteAll.addClass('showMainQuoteAll');
     var $mainQuote = $('#mainQuote');
 
-    var $slideBoard = $('#slideBoard');
-    $('.color-block').hover(function(){
-        var index = $(this).index('.color-block');
-        $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');
-    });
-    this.onPointOver = function (e, object, n, index){
+
+    this.onPointOver = function(e, object, n, index) {
         setMainQuoteText(pointText[index]['title'], pointText[index]['desc']);
         $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');
     };
 
-    function setMainQuoteText(title, content){
+    function setMainQuoteText(title, content) {
         $mainQuote.html('<h4>' + title + '</h4><p>' + content + '</p>');
     }
 
     this.textShowIndex = 0;
-    this.beginTextShowTimer = setTimeout(function (){
-        window.textShowTimer = setInterval(function (){
+    this.beginTextShowTimer = setTimeout(function() {
+        window.textShowTimer = setInterval(function() {
             window.textShow();
         }, window.textShowInterval);
     }, 7000);
 
-    this.textShow = function (){
+    this.textShow = function() {
         var textArr = window.quotesArr[window.textShowIndex];
         TweenLite.to("#lineQuote2", .3, {
             scaleX: 0,
@@ -205,7 +206,7 @@
             y: 70,
             autoAlpha: 0,
             ease: Power1.easeIn,
-            onComplete: function (){
+            onComplete: function() {
                 setMainQuoteText(textArr[0], textArr[1]);
             },
             onCompleteParams: []
@@ -213,8 +214,7 @@
         TweenLite.to("#secondQuote", .5, {
             y: 30,
             ease: Power1.easeIn,
-            onComplete: function (){
-            },
+            onComplete: function() {},
             onCompleteParams: []
         });
         TweenLite.to("#lineQuote2", 1, {

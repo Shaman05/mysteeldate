@@ -9,6 +9,8 @@
     $(function() {
         var $slideBoard = $('#slideBoard');
         var $board = $('#section2').find('.board');
+       
+       
         var page1Options = {
             pagination: '.pagination-stage',
             grabCursor: true
@@ -123,6 +125,11 @@
         //     $(this).parents('.container')[0].style.transform = 'rotateY(' + deg + 'deg)';
         // });
         // 
+        
+         setTimeout(function() {
+             $board.css("margin-top", "-"+ $board.height()/2 +"px");
+             $(".stage_layer2d").css("margin-top", "-"+ $(".stage_layer2d").height()/2 +"px");
+        }, 0);
         var swiper2dsS2 = new Swiper('#s2_contain', {
             pagination: '.swiper-pagination',
             paginationClickable: true,
@@ -135,11 +142,11 @@
             }
         });
 
-        $("#s2_contain").mouseover(function() {
+        $("#s2_contain,#section2 .board").mouseover(function() {
             swiper2dsS2.stopAutoplay();
         });
 
-        $("#s2_contain").mouseout(function() {
+        $("#s2_contain,#section2 .board").mouseout(function() {
            swiper2dsS2.startAutoplay();
         });
 

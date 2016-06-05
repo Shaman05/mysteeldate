@@ -846,7 +846,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         padding: 20px;
         z-index: 9;
         color: #fff;
-        transform: translate(0, -50%);
+       // transform: translate(0, -50%);
         border: 1px solid #929DD6;
         @include bgcolor-alpha($bgcolor: rgba(255, 255, 255, 0.3));
         .scroll-box{
@@ -877,7 +877,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         background: linear-gradient(to right,  rgb(5,5,3) 0%,rgb(67,67,67) 49%,rgb(44,44,43) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050503', endColorstr='#2c2c2b',GradientType=1 ); /* IE6-9 */
          @include border-radius(10px);
-         transform: translate(0, -50%);
+        // transform: translate(0, -50%);
         .box{
             display:block;
             width: 100%;

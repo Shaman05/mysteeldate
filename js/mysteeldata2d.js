@@ -8,6 +8,7 @@
 
     $(function() {
         var $slideBoard = $('#slideBoard');
+        var $board = $('#section2').find('.board');
         var page1Options = {
             pagination: '.pagination-stage',
             grabCursor: true
@@ -29,7 +30,7 @@
                 grabCursor: true
             })
         };
-       
+        $slideBoard.css('opacity', '1');
         // $('#stage_area1, #stage_area2, #stage_area3').find('.swiper-slide').on('click', function(){
         //     var $this = $(this);
         //     var swiperObjIndex = $this.attr('data-index');
@@ -126,31 +127,28 @@
             pagination: '.swiper-pagination',
             paginationClickable: true,
             grabCursor: true,
-            //loop: true,
+            loop: true,
             autoplay: 3000,
             onSlideChangeEnd: function(swiper) {
-                console.log(swiper.activeIndex % 3)
-               $slideBoard.find('.swiper-container').removeClass('cur').eq(swiper.activeIndex % 3).addClass('cur');
-
+               // console.log(swiper.activeIndex % 3-1)
+                $board.removeClass('cur').eq(swiper.activeIndex % 3-1).addClass('cur');
             }
         });
 
         $("#s2_contain").mouseover(function() {
             swiper2dsS2.stopAutoplay();
-            // console.log("mouseover")
         });
 
         $("#s2_contain").mouseout(function() {
            swiper2dsS2.startAutoplay();
-            //console.log("mouseout")
         });
 
-        var $board = $('#section2').find('.board');
+       //swiper滑动 手指上去右侧相应显示
         var $item = $('#s2_contain').find('.swiper-slide');
         $item.hover(function() {
             var $this = $(this);
             var index = $this.index();
-           // console.log(index % 3-1)
+            //console.log(index % 3-1)
             $board.removeClass('cur').eq(index % 3-1).addClass('cur');
             $this.addClass('cur');
         }, function() {
@@ -172,8 +170,12 @@
     var $mainQuoteAll = $('#mainQuoteAll');
     $mainQuoteAll.addClass('showMainQuoteAll');
     var $mainQuote = $('#mainQuote');
-
-
+    var $slideBoard = $('#slideBoard');
+    $('.color-block').hover(function(){
+       var index = $(this).index('.color-block');
+        $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');
+    });
+    
     this.onPointOver = function(e, object, n, index) {
         setMainQuoteText(pointText[index]['title'], pointText[index]['desc']);
         $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');

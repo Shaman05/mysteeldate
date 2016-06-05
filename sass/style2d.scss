@@ -199,6 +199,8 @@ body {
     //background: url('../img/top_bg.png') no-repeat center top;
    // @include bgcolor-alpha($bgcolor: rgba(24, 46, 77, 0.3));
     .tn-header {
+        position: relative;
+        z-index: 2;
         width: 100%;
         height: 120px;
         margin: 0 auto;
@@ -226,7 +228,34 @@ body {
             li {
                 padding: 0 35px;
                 float: left;
+                position: relative;
                 @include font-fsc1($f-sty: $fontYaHei, $fs: 16px, $fc: #fff, $f-lh: 40px);
+                dl{
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    left:0;
+                    top: 40px;
+                    padding: 2px 0 0;
+                    dd{
+                        background:rgba(44, 69, 86, 0.7);
+                        padding:10px 5px;
+                        text-align: center;
+                       @include font-fsc1($f-sty: $fontYaHei, $fs: 15px, $fc: #fff, $f-lh:24px);
+                       &:hover{
+                           background: #4DC2E3;
+                           cursor: pointer;
+                       }
+                    }
+                    &:hover{
+                         display: block; 
+                    }
+                }
+                &:hover{
+                   dl{
+                       display: block; 
+                    }
+                }
                 a {
                     color: #4DC2E3;
                     &:hover {

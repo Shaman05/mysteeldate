@@ -129,6 +129,7 @@
          setTimeout(function() {
              $board.css("margin-top", "-"+ $board.height()/2 +"px");
              $(".stage_layer2d").css("margin-top", "-"+ $(".stage_layer2d").height()/2 +"px");
+             $("#section5 .s5-logo").css("margin-left", "-"+ $(".s5-logo").width()/2 +"px");
         }, 0);
         var swiper2dsS2 = new Swiper('#s2_contain', {
             pagination: '.swiper-pagination',

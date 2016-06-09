@@ -238,7 +238,7 @@ body {
                     top: 40px;
                     padding: 2px 0 0;
                     dd{
-                        background:rgba(44, 69, 86, 0.7);
+                        @include bgcolor-alpha($bgcolor: rgba(44, 69, 86, 0.7));
                         padding:10px 5px;
                         text-align: center;
                        @include font-fsc1($f-sty: $fontYaHei, $fs: 15px, $fc: #fff, $f-lh:24px);

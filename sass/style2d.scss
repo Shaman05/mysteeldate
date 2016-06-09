@@ -457,7 +457,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
              opacity: 0;
              transition: all 1s;
              overflow: hidden;
-             background: rgba(0, 0, 0, 0.2);
+             @include bgcolor-alpha($bgcolor: rgba(0, 0, 0, 0.2));
       
              .pagination-stage {
                  position: absolute;
@@ -480,13 +480,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
                 }
              }
             #stage_area1{
-                background:  rgba(52, 49, 80, 0.2);
+                @include bgcolor-alpha($bgcolor: rgba(52, 49, 80, 0.2));
             }
              #stage_area2{
-                background:  rgba(140, 114, 148, 0.2);
+                @include bgcolor-alpha($bgcolor: rgba(140, 114, 148, 0.2));
             }
              #stage_area3{
-                background:  rgba(38, 121, 88, 0.2);
+                @include bgcolor-alpha($bgcolor: rgba(38, 121, 88, 0.2));
             }
              .swiper-container{
                     position:absolute;
@@ -649,8 +649,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
 }
 .square-bg{
    position:relative;
-   opacity: 0;
-   margin:0;
+   @include opacity($opacity:0);
    height:90%;
    width: 96%;
    left:43%;
@@ -665,7 +664,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
    background:#211E3C;
   &.swiper-slide-active,&.active {
         .square-bg {
-            opacity: 1;
+            @include opacity($opacity:100);
         }
     }
     h1 {
@@ -696,6 +695,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         width: 40%;
         height: 80%;
         overflow: hidden;
+        background: #000;
         //background: url(../img/s1_img@2.png);
         li {
             position: relative;
@@ -829,15 +829,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     }
      &.swiper-slide-active,&.active {
         .square-bg {
-            opacity: 1;
+           @include opacity($opacity:100);
         }
     }
     h1 {
         background: url(../img/tit-tsyj.png) center center;
     }
     .board {
-        opacity: 0;
-        display: inline-block;
+        //opacity: 0;
+        display: none;
+       // display: inline-block;
         position: absolute;
         top: 50%;
         right: 10%;
@@ -908,7 +909,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
                 cursor: pointer;
                 }
                 .swiper-active-switch {
-                background: #fff;
+                background: #EBC54A;
                 }
         }
         .arrow-line{
@@ -960,7 +961,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     }
     &.swiper-slide-active,&.active {
         .board.cur {
-            opacity: 1;
+           // opacity: 1;
+          display: inline-block;
         }
     }
 }
@@ -972,7 +974,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
     }
      &.swiper-slide-active,&.active{
         .square-bg {
-            opacity: 1;
+            @include opacity($opacity:100);
         }
     }
     h1 {
@@ -1153,7 +1155,7 @@ $pulsateBigSize: 14px;
     }
      &.swiper-slide-active,&.active {
         .square-bg {
-            opacity: 1;
+            @include opacity($opacity:100);
         }
     }
     h1 {
@@ -1310,7 +1312,7 @@ $pulsateBigSize: 14px;
     background: #1A062A;
     .div-opacity {
         position: relative;
-        opacity: 0;
+        @include opacity($opacity:0);
         height: 100%;
         .s5-top {
             position: absolute;
@@ -1360,7 +1362,7 @@ $pulsateBigSize: 14px;
     &.swiper-slide-active,&.active{
         .div-opacity {
             position: relative;
-            opacity: 1;
+            @include opacity($opacity:100);
             height: 100%;
         }
     }

@@ -155,7 +155,7 @@
   -o-opacity:$opacity / 100;
   -khtml-opacity: $opacity / 100;
   @if $filter{
-    filter: alpha(opacity=$opacity);
+    filter: alpha(opacity=$opacity);  
   }
 }
 %opacity{

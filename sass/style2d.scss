@@ -682,6 +682,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         height: 30%;
         background: url(../img/s1_logo@2.png) no-repeat center center;
         background-size:contain;
+        background:none\0;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='../img/s1_logo@2.png',sizingMethod='scale');
     }
     .s1-img {
         display: inline-block;
@@ -695,7 +698,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
         width: 40%;
         height: 80%;
         overflow: hidden;
-        background: #000;
         //background: url(../img/s1_img@2.png);
         li {
             position: relative;
@@ -772,6 +774,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#862aba', end
                     animation: anim-moema-2 0.3s 0.3s forwards;
                 }
             }
+        }
+        //equivalent to li:nth-child(1)
+        li:first-child {
+          background:url(../img/s1_icon/1.png) no-repeat center center #EBC54A;
+        }
+        //equivalent to li:nth-child(2)
+        li:first-child + li {
+          background:url(../img/s1_icon/2.png) no-repeat center center #DDDDDB;
+        }
+        //equivalent to li:nth-child(3)
+         li:first-child + li + li{
+           background:url(../img/s1_icon/3.png) no-repeat center center #DE6A97;
+        }
+        //equivalent to li:nth-child(4)
+         li:first-child + li + li+ li{
+           background:url(../img/s1_icon/4.png) no-repeat center center #DE6A97;
+        }
+        //equivalent to li:nth-child(5)
+         li:first-child + li + li + li+ li{
+           background:url(../img/s1_icon/5.png) no-repeat center center #C66251;
+        }
+        //equivalent to li:nth-child(6)
+         li:first-child + li + li + li + li + li{
+           background:url(../img/s1_icon/6.png) no-repeat center center #EBC24E;
+        }
+        //equivalent to li:nth-child(7)
+         li:first-child + li + li + li + li + li + li{
+           background:url(../img/s1_icon/7.png) no-repeat center center #497ABF;
+        }
+        //equivalent to li:nth-child(8)
+         li:first-child + li + li + li + li + li + li + li{
+          background:url(../img/s1_icon/8.png) no-repeat center center #899FB4;
+        }
+        //equivalent to li:nth-child(9)
+         li:first-child + li + li + li + li + li + li + li + li{ 
+          background:url(../img/s1_icon/9.png) no-repeat center center #CD5A5D;
+        }
+        //equivalent to li:nth-child(10)
+         li:first-child + li + li + li + li + li + li + li + li + li{ 
+          background:url(../img/s1_icon/10.png) no-repeat center center #EA9959;
+        }
+        //equivalent to li:nth-child(11)
+         li:first-child + li + li + li + li + li + li + li + li + li + li{ 
+          background:url(../img/s1_icon/11.png) no-repeat center center #727DCA;
         }
     }
 }
@@ -1172,7 +1218,6 @@ $pulsateBigSize: 14px;
         .logic-switch-btn {
             display: block;
             width: 230px;
-            ;
             margin: 18% auto 30px;
             height: 74px;
             border: 2px solid #fff;
@@ -1188,7 +1233,8 @@ $pulsateBigSize: 14px;
     }
     .logic-imgs {
         position: absolute;
-        opacity: 0;
+        display: none;
+        //opacity: 0;
         right: 5%;
         top: 18%;
         bottom: 10%;
@@ -1298,7 +1344,8 @@ $pulsateBigSize: 14px;
             }
         }
         &.active {
-            opacity: 1;
+            display: inline-block;
+            //opacity: 1;
         }
     }
    &.swiper-slide-active,&.active {
@@ -1329,9 +1376,13 @@ $pulsateBigSize: 14px;
             left: 50%;
             //transform: translate(-50%, 0);
             width: 30%;
+            width: 20%\0;  //ie8
             height: 20%;
             background: url(../img/s1_logo@2.png) no-repeat center center;
             background-size: contain;
+            background:none\0;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+            src='../img/s1_logo@2.png',sizingMethod='scale');  //ie8 background-size
         }
         .weixin-img {
             position: absolute;

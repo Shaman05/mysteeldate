@@ -9,8 +9,8 @@
     $(function() {
         var $slideBoard = $('#slideBoard');
         var $board = $('#section2').find('.board');
-       
-       
+
+
         var page1Options = {
             pagination: '.pagination-stage',
             grabCursor: true
@@ -125,11 +125,11 @@
         //     $(this).parents('.container')[0].style.transform = 'rotateY(' + deg + 'deg)';
         // });
         // 
-        
-         setTimeout(function() {
-             $board.css("margin-top", "-"+ $board.height()/2 +"px");
-             $(".stage_layer2d").css("margin-top", "-"+ $(".stage_layer2d").height()/2 +"px");
-             $("#section5 .s5-logo").css("margin-left", "-"+ $(".s5-logo").width()/2 +"px");
+
+        setTimeout(function() {
+            $board.css("margin-top", "-" + $board.height() / 2 + "px");
+            $(".stage_layer2d").css("margin-top", "-" + $(".stage_layer2d").height() / 2 + "px");
+            $("#section5 .s5-logo").css("margin-left", "-" + $(".s5-logo").width() / 2 + "px");
         }, 0);
         var swiper2dsS2 = new Swiper('#s2_contain', {
             pagination: '.swiper-pagination',
@@ -138,8 +138,8 @@
             loop: true,
             autoplay: 3000,
             onSlideChangeEnd: function(swiper) {
-               // console.log(swiper.activeIndex % 3-1)
-                $board.removeClass('cur').eq(swiper.activeIndex % 3-1).addClass('cur');
+                // console.log(swiper.activeIndex % 3-1)
+                $board.removeClass('cur').eq(swiper.activeIndex % 3 - 1).addClass('cur');
             }
         });
 
@@ -148,16 +148,16 @@
         });
 
         $("#s2_contain,#section2 .board").mouseout(function() {
-           swiper2dsS2.startAutoplay();
+            swiper2dsS2.startAutoplay();
         });
 
-       //swiper滑动 手指上去右侧相应显示
+        //swiper滑动 手指上去右侧相应显示
         var $item = $('#s2_contain').find('.swiper-slide');
         $item.hover(function() {
             var $this = $(this);
             var index = $this.index();
             //console.log(index % 3-1)
-            $board.removeClass('cur').eq(index % 3-1).addClass('cur');
+            $board.removeClass('cur').eq(index % 3 - 1).addClass('cur');
             $this.addClass('cur');
         }, function() {
             $(this).removeClass('cur');
@@ -172,6 +172,7 @@
             $logicSwitch.removeClass('active');
             $this.addClass('active');
             $logicImgs.removeClass('active').eq($this.index()).addClass('active');
+            console.log($this.index())
         });
     });
 
@@ -179,11 +180,11 @@
     $mainQuoteAll.addClass('showMainQuoteAll');
     var $mainQuote = $('#mainQuote');
     var $slideBoard = $('#slideBoard');
-    $('.color-block').hover(function(){
-       var index = $(this).index('.color-block');
+    $('.color-block').hover(function() {
+        var index = $(this).index('.color-block');
         $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');
     });
-    
+
     this.onPointOver = function(e, object, n, index) {
         setMainQuoteText(pointText[index]['title'], pointText[index]['desc']);
         $slideBoard.find('.swiper-container').removeClass('cur').eq(index).addClass('cur');

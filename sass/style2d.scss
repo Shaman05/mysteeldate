@@ -1196,17 +1196,13 @@ $pulsateBigSize: 14px;
     .square-bg{
         background: url(../img/damand_bg.png) center center #309ABB;
     }
-     &.swiper-slide-active,&.active {
-        .square-bg {
-            @include opacity($opacity:100);
-        }
-    }
+
     h1 {
         background: url(../img/tit-ljtj.png) center center;
     }
     .logic-switch {
         position: absolute;
-        opacity: 0;
+        @include opacity($opacity:0);
         left: 5%;
         top: 20%;
         bottom: 10%;
@@ -1230,8 +1226,8 @@ $pulsateBigSize: 14px;
     }
     .logic-imgs {
         position: absolute;
-        display: none;
-        //opacity: 0;
+        display: inline-block;
+        @include opacity($opacity:0);
         right: 5%;
         top: 18%;
         bottom: 10%;
@@ -1341,14 +1337,23 @@ $pulsateBigSize: 14px;
             }
         }
         &.active {
-            display: inline-block;
-            //opacity: 1;
+            @include opacity($opacity:100);
+            li{
+                .box{
+                    h4{
+                         @include opacity($opacity:100);
+                    }
+                }
+            }
         }
     }
-   &.swiper-slide-active,&.active {
-        .logic-switch {
-            opacity: 1;
-        }
+   &.active {
+        .square-bg {
+            @include opacity($opacity:100);
+             .logic-switch {
+                 @include opacity($opacity:100);
+             }
+        } 
     }
 }
 
@@ -1529,6 +1534,23 @@ $pulsateBigSize: 14px;
             .logic-switch{
                filter:Alpha(opacity=0); 
             }
+            .logic-imgs{
+                 filter:Alpha(opacity=0);
+                 *zoom:1; 
+                 li{
+                    filter:Alpha(opacity=0);
+                    .box{
+                        filter:Alpha(opacity=0);
+                        .swiper-container{
+                           filter:Alpha(opacity=0); 
+                           h4{
+                               filter:Alpha(opacity=0);  
+                            } 
+                        }
+                        
+                    }
+                 } 
+            }
             .section-bottom-txt{
                filter:Alpha(opacity=0); 
              }
@@ -1541,6 +1563,25 @@ $pulsateBigSize: 14px;
                  }  
                  .logic-switch{
                      filter:Alpha(opacity=100); 
+                 }
+                 .logic-imgs{
+                    
+                     &.active{
+                        filter:Alpha(opacity=100); 
+                        li{
+                            filter:Alpha(opacity=100); 
+                            .box{
+                                 filter:Alpha(opacity=100); 
+                                  .swiper-container{
+                                        filter:Alpha(opacity=100);
+                                         h4{
+                                           filter:Alpha(opacity=100);  
+                                        }  
+                                   }
+                               
+                            }
+                        }
+                     }
                  }
                  .section-bottom-txt{
                      filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#4DFFFFFF', endColorstr='#4DFFFFFF');
